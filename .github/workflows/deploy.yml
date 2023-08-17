@@ -33,7 +33,7 @@ jobs:
           username: ${{ secrets.PIUSERNAME }}
           password: ${{ secrets.PIPASSWORD }}
           files: |
-            ./pi-nginx/*
+            ./navigation/*
           remote-path: "/home/"
           before-upload: |
               rm -rf /home/navigation/
