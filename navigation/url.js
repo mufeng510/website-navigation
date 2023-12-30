@@ -21,8 +21,38 @@ function updateHref(href) {
     return href;
 }
 
+/**
+ * 将导航渲染到dom
+ * @param {*} list 
+ * @param {*} container 
+ */
+function urlListToElement(list, position){
+    var ulElement = document.querySelector('#urlContainer');
+
+    // 遍历数组，构建 HTML 字符串
+    var htmlString = '';
+    list.forEach(function (category) {
+        htmlString +=
+            '<li class="title"><svg class="icon" aria-hidden="true"><use xlink:href="#' + category.icon + '"></use></svg> ' + category.title + '</li>';
+        category.items.forEach(function (item) {
+            htmlString +=
+                '<li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="' +
+                item.href +
+                '" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#' +
+                item.icon +
+                '"></use></svg><span>' +
+                item.text +
+                '</span></a></li>';
+        });
+    });
+
+    // 将 HTML 字符串填充到 ul 元素中
+    // ulElement.innerHTML = htmlString;
+    ulElement.insertAdjacentHTML(position, htmlString);
+}
+
 function myFunction() {
-    var listItems = [
+    var fristList = [
         {
             title: '热门常用',
             icon: 'icon-remen',
@@ -40,6 +70,8 @@ function myFunction() {
                 { href: 'https://photo.yq59.top/', icon: 'icon-self-chatgpticon', text: '相册' }
             ]
         },
+    ];
+    var secondList = [
         {
             title: '视频媒体',
             icon: 'icon-shipin',
@@ -51,9 +83,8 @@ function myFunction() {
                 { href: 'https://www.youtube.com/', icon: 'icon-youtube', text: 'Youtube' },
                 { href: 'http://www.acfun.cn/index.html', icon: 'icon-acfun', text: 'ACFUN' },
                 { href: 'https://www.bilibili.com/', icon: 'icon-bili', text: '哔哩哔哩' },
-                { href: 'https://k1080.net/', icon: 'icon-yingshi', text: 'K1080' },
-                { href: 'https://www.nfmovies.com/', icon: 'icon-netflix', text: '奈非影视' },
-                { href: 'https://yunbtv.com/', icon: 'icon-yunbo', text: '云播TV' }
+                { href: 'https://pianyuan.org/', icon: 'icon-yingshi', text: '片源网' },
+                { href: 'https://www.555yy1.com/', icon: 'icon-yunbo', text: '555影视' }
             ]
         },
         {
@@ -158,11 +189,13 @@ function myFunction() {
         }
     ];
 
+    urlListToElement(secondList, 'beforeend');
+
     supportsIPv6()
         .then((res) => {
             console.log('IPv6 is supported.');
             // 根据条件更新href值
-            listItems.forEach((category) => {
+            fristList.forEach((category) => {
                 category.items.forEach((item) => {
                     item.href = updateHref(item.href);
                 });
@@ -172,29 +205,7 @@ function myFunction() {
             console.log('IPv6 is not supported.');
         })
         .finally(() => {
-            console.log(listItems);
-            // 找到要渲染的 ul 元素
-            var ulElement = document.querySelector('#urlContainer');
-
-            // 遍历数组，构建 HTML 字符串
-            var htmlString = '<ul class="mylist row">';
-            listItems.forEach(function (category) {
-                htmlString +=
-                    '<li class="title"><svg class="icon" aria-hidden="true"><use xlink:href="#' + category.icon + '"></use></svg> ' + category.title + '</li>';
-                category.items.forEach(function (item) {
-                    htmlString +=
-                        '<li class="col-3 col-sm-3 col-md-3 col-lg-1"><a rel="nofollow" href="' +
-                        item.href +
-                        '" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#' +
-                        item.icon +
-                        '"></use></svg><span>' +
-                        item.text +
-                        '</span></a></li>';
-                });
-            });
-
-            // 将 HTML 字符串填充到 ul 元素中
-            ulElement.innerHTML = htmlString;
+            urlListToElement(fristList, 'afterbegin');
         });
 }
 
