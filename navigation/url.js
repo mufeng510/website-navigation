@@ -73,6 +73,39 @@ function myFunction() {
     ];
     var secondList = [
         {
+            title: '开发',
+            icon: 'icon-kongzhitai',
+            items: [
+                { href: 'https://github.com/', icon: 'icon-github', text: 'Github' },
+                { href: 'https://www.52pojie.cn/', icon: 'icon-theater-masks', text: '吾爱破解' },
+                { href: 'https://codepen.io/', icon: 'icon-codepen', text: 'Codepen' },
+                { href: 'https://segmentfault.com/', icon: 'icon-msg', text: 'SF思否' },
+                { href: 'https://cdnjs.com/', icon: 'icon-cdnjs', text: 'CdnJs' },
+                { href: 'https://fontawesome.com/icons?d=gallery&m=free', icon: 'icon-font-awesome', text: 'Font A.' },
+                { href: 'https://msdn.itellyou.cn/', icon: 'icon-windows', text: 'MSDN下载' },
+                { href: 'https://dash.cloudflare.com/', icon: 'icon-cloudflare', text: 'C. flare' },
+                { href: 'http://www.w3school.com.cn/', icon: 'icon-h5', text: 'W3school' },
+                { href: 'https://www.swiper.com.cn/', icon: 'icon-S', text: 'Swiper' }
+            ]
+        },
+        {
+            title: '工具',
+            icon: 'icon-ai-tool',
+            items: [
+                { href: 'https://tools.miku.ac/', icon: 'icon-ai-tool', text: 'Miku工具' },
+                { href: 'https://ip233.cn/', icon: 'icon-wangluo', text: 'IP查询' },
+                { href: 'https://translate.google.com/?hl=zh-CN', icon: 'icon-fanyi', text: '谷歌翻译' },
+                { href: 'https://feedly.com', icon: 'icon-feedly', text: 'Feedly' },
+                { href: 'https://pandao.github.io/editor.md/index.html', icon: 'icon-md', text: 'MD编辑器' },
+                { href: 'http://cubic-bezier.com', icon: 'icon-quxian', text: '贝赛尔曲线' },
+                { href: 'https://5iux.cn/base64/', icon: 'icon-base64', text: 'Base64' },
+                { href: 'https://javascriptobfuscator.com/Javascript-Obfuscator.aspx', icon: 'icon-jshunxiao', text: 'JS混淆器' },
+                { href: 'https://ping.pe', icon: 'icon-wangluo1', text: 'Ping.pe' },
+                { href: 'https://ping.chinaz.com/', icon: 'icon-pingup', text: '站长Ping' },
+                { href: 'https://apkdl.in/', icon: 'icon-anzhuo', text: 'APK下载' }
+            ]
+        },
+        {
             title: '视频媒体',
             icon: 'icon-shipin',
             items: [
@@ -84,6 +117,7 @@ function myFunction() {
                 { href: 'http://www.acfun.cn/index.html', icon: 'icon-acfun', text: 'ACFUN' },
                 { href: 'https://www.bilibili.com/', icon: 'icon-bili', text: '哔哩哔哩' },
                 { href: 'https://pianyuan.org/', icon: 'icon-yingshi', text: '片源网' },
+                { href: 'http://www.slimego.cn/', icon: 'icon-shilaimu', text: '史莱姆' },
                 { href: 'https://www.555yy1.com/', icon: 'icon-yunbo', text: '555影视' }
             ]
         },
@@ -137,40 +171,6 @@ function myFunction() {
                 { href: 'https://mail.sina.com.cn/', icon: 'icon-xinlangwang', text: '新浪邮箱' },
                 { href: 'https://mail.qq.com/', icon: 'icon-QQ', text: 'QQ邮箱' },
                 { href: 'https://qiye.aliyun.com/', icon: 'icon-yunyouxiang', text: '阿里邮箱' }
-            ]
-        },
-        {
-            title: '工具',
-            icon: 'icon-ai-tool',
-            items: [
-                { href: 'https://tools.miku.ac/', icon: 'icon-ai-tool', text: 'Miku工具' },
-                { href: 'https://ip233.cn/', icon: 'icon-wangluo', text: 'IP查询' },
-                { href: 'https://translate.google.cn/?hl=zh-CN', icon: 'icon-fanyi', text: '谷歌翻译' },
-                { href: 'http://www.slimego.cn/', icon: 'icon-shilaimu', text: '史莱姆' },
-                { href: 'https://feedly.com', icon: 'icon-feedly', text: 'Feedly' },
-                { href: 'https://pandao.github.io/editor.md/index.html', icon: 'icon-md', text: 'MD编辑器' },
-                { href: 'http://cubic-bezier.com', icon: 'icon-quxian', text: '贝赛尔曲线' },
-                { href: 'https://5iux.cn/base64/', icon: 'icon-base64', text: 'Base64' },
-                { href: 'https://javascriptobfuscator.com/Javascript-Obfuscator.aspx', icon: 'icon-jshunxiao', text: 'JS混淆器' },
-                { href: 'https://ping.pe', icon: 'icon-wangluo1', text: 'Ping.pe' },
-                { href: 'https://ping.chinaz.com/', icon: 'icon-pingup', text: '站长Ping' },
-                { href: 'https://apkdl.in/', icon: 'icon-anzhuo', text: 'APK下载' }
-            ]
-        },
-        {
-            title: '开发',
-            icon: 'icon-kongzhitai',
-            items: [
-                { href: 'http://www.w3school.com.cn/', icon: 'icon-h5', text: 'W3school' },
-                { href: 'https://github.com/', icon: 'icon-github', text: 'Github' },
-                { href: 'https://codepen.io/', icon: 'icon-codepen', text: 'Codepen' },
-                { href: 'https://www.52pojie.cn/', icon: 'icon-theater-masks', text: '吾爱破解' },
-                { href: 'https://segmentfault.com/', icon: 'icon-msg', text: 'SF思否' },
-                { href: 'https://cdnjs.com/', icon: 'icon-cdnjs', text: 'CdnJs' },
-                { href: 'https://fontawesome.com/icons?d=gallery&m=free', icon: 'icon-font-awesome', text: 'Font A.' },
-                { href: 'https://msdn.itellyou.cn/', icon: 'icon-windows', text: 'MSDN下载' },
-                { href: 'https://dash.cloudflare.com/', icon: 'icon-cloudflare', text: 'C. flare' },
-                { href: 'https://www.swiper.com.cn/', icon: 'icon-S', text: 'Swiper' }
             ]
         },
         {
