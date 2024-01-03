@@ -58,8 +58,7 @@ function myFunction() {
             icon: 'icon-remen',
             items: [
                 { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
-                { href: 'https://chat.openai.com/', icon: 'icon-self-chatgpticon', text: 'ChatGPT官方' },
-                { href: 'https://test.hyper-ai.top/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' }
+                { href: 'https://pandora.yq59.top/', icon: 'icon-self-pandora', text: 'PandoraNext' }
             ]
         },
         {
@@ -67,11 +66,29 @@ function myFunction() {
             icon: 'icon-self-siyouyun',
             items: [
                 { href: 'https://alist.yq59.top/', icon: 'icon-self-alist', text: '文件列表' },
-                { href: 'https://photo.yq59.top/', icon: 'icon-self-chatgpticon', text: '相册' }
+                { href: 'https://photo.yq59.top/', icon: 'icon-self-xiangce', text: '相册' },
+                { href: 'https://ariang.yq59.top/', icon: 'icon-self-aria2', text: 'AriaNg' }
+            ]
+        },
+        {
+            title: '家庭服务',
+            icon: 'icon-self-faxianye_jia_jiating',
+            items: [
+                { href: 'https://v2ray.yq59.top/', icon: 'icon-self-V2raya_A', text: 'v2rayA' },
+                { href: 'https://cups.yq59.top/', icon: 'icon-self-dayinji', text: 'cups' },
             ]
         },
     ];
     var secondList = [
+        {
+            title: 'AI大模型',
+            icon: 'icon-self-rengongzhineng',
+            items: [
+                { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
+                { href: 'https://chat.openai.com/', icon: 'icon-self-chatgpticon', text: 'ChatGPT官方' },
+                { href: 'https://test.hyper-ai.top/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' }
+            ]
+        },
         {
             title: '开发',
             icon: 'icon-kongzhitai',
