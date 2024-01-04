@@ -74,8 +74,10 @@ function myFunction() {
             title: '家庭服务',
             icon: 'icon-self-faxianye_jia_jiating',
             items: [
+                { href: 'http://192.168.68.182:9978/', icon: 'icon-self-tv_airplay_line', text: 'TVBOX' },
                 { href: 'https://v2ray.yq59.top/', icon: 'icon-self-V2raya_A', text: 'v2rayA' },
-                { href: 'https://cups.yq59.top/', icon: 'icon-self-dayinji', text: 'cups' },
+                { href: 'https://ql.yq59.top/', icon: 'icon-self-dragon', text: '青龙' },
+                { href: 'https://cups.yq59.top/', icon: 'icon-self-dayinji', text: 'cups' }
             ]
         },
     ];

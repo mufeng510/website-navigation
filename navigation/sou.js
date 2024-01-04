@@ -52,5 +52,7 @@ $(function () {
     form.addEventListener('submit', function (event) {
         var input = document.getElementById('search-text');
         input.value = '';
+        $('#word').empty();
+        $('#word').hide();
     });
 });
