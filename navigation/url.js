@@ -120,6 +120,7 @@ function myFunction() {
                 { href: 'https://bard.google.com/chat', icon: 'icon-self-googlebard', text: 'Bard' },
                 { href: 'https://xinghuo.xfyun.cn/desk/', icon: 'icon-self-xunfeichatgpt', text: '讯飞星火' },
                 { href: 'https://yiyan.baidu.com/', icon: 'icon-self-baiduchatgpt', text: '文心一言' },
+                { href: 'https://discord.com/channels/@me', icon: 'icon-self-discord', text: 'Discord' },
             ]
         },
         {
