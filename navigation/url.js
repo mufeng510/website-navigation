@@ -58,6 +58,7 @@ function myFunction() {
             icon: 'icon-remen',
             items: [
                 { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
+                { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' },
                 { href: 'https://pandora.yq59.top/', icon: 'icon-self-pandora', text: 'PandoraNext' }
             ]
         },
@@ -115,6 +116,7 @@ function myFunction() {
             icon: 'icon-self-rengongzhineng',
             items: [
                 { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
+                { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' },
                 { href: 'https://chat.openai.com/', icon: 'icon-self-chatgpticon', text: 'ChatGPT官方' },
                 { href: 'https://test.hyper-ai.top/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' },
                 { href: 'https://bard.google.com/chat', icon: 'icon-self-googlebard', text: 'Bard' },
