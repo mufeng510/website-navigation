@@ -219,7 +219,8 @@ function myFunction() {
 
     urlListToElement(secondList, 'beforeend');
 
-    supportsIPv6()
+    setTimeout(() => {
+        supportsIPv6()
         .then((res) => {
             console.log('IPv6 is supported.');
             // 根据条件更新href值
@@ -235,6 +236,7 @@ function myFunction() {
         .finally(() => {
             urlListToElement(fristList, 'afterbegin');
         });
+    },10);
 }
 
 // 使用事件监听器绑定 "load" 事件
