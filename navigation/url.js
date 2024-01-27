@@ -54,35 +54,19 @@ function urlListToElement(list, position){
 function myFunction() {
     var fristList = [
         {
-            title: '热门常用',
-            icon: 'icon-remen',
+            title: 'AI大模型',
+            icon: 'icon-self-rengongzhineng',
             items: [
-                { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
                 { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' },
-                { href: 'https://pandora.yq59.top/', icon: 'icon-self-pandora', text: 'PandoraNext' }
+                { href: 'https://test.hyper-ai.top:4443/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' },
+                { href: 'https://chat.openai.com/', icon: 'icon-self-chatgpticon', text: 'ChatGPT官方' },
+                { href: 'https://bard.google.com/chat', icon: 'icon-self-googlebard', text: 'Bard' },
+                { href: 'https://xinghuo.xfyun.cn/desk/', icon: 'icon-self-xunfeichatgpt', text: '讯飞星火' },
+                { href: 'https://yiyan.baidu.com/', icon: 'icon-self-baiduchatgpt', text: '文心一言' },
+                { href: 'https://discord.com/channels/@me', icon: 'icon-self-discord', text: 'Discord' },
+                { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
             ]
         },
-        {
-            title: '私有云',
-            icon: 'icon-self-siyouyun',
-            items: [
-                { href: 'https://alist.yq59.top/', icon: 'icon-self-alist', text: '文件列表' },
-                { href: 'https://photo.yq59.top/', icon: 'icon-self-xiangce', text: '相册' },
-                { href: 'https://ariang.yq59.top/', icon: 'icon-self-aria2', text: 'AriaNg' }
-            ]
-        },
-        {
-            title: '家庭服务',
-            icon: 'icon-self-faxianye_jia_jiating',
-            items: [
-                { href: 'http://192.168.68.182:9978/', icon: 'icon-self-tv_airplay_line', text: 'TVBOX' },
-                { href: 'https://v2ray.yq59.top/', icon: 'icon-self-V2raya_A', text: 'v2rayA' },
-                { href: 'https://ql.yq59.top/', icon: 'icon-self-dragon', text: '青龙' },
-                { href: 'https://cups.yq59.top/', icon: 'icon-self-dayinji', text: 'cups' }
-            ]
-        },
-    ];
-    var secondList = [
         {
             title: '开发',
             icon: 'icon-kongzhitai',
@@ -109,20 +93,6 @@ function myFunction() {
                 { href: 'https://cmlearning.info/', icon: 'icon-self--jing', text: '大医精诚' },
                 { href: 'https://www.zysj.com.cn/', icon: 'icon-self-a-37zhongyike38zhongyiquanke', text: '中医世家' },
                 { href: 'http://www.mst1739.com/yidao/yuedu.php', icon: 'icon-self-guji', text: '中医古籍' },
-            ]
-        },
-        {
-            title: 'AI大模型',
-            icon: 'icon-self-rengongzhineng',
-            items: [
-                { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
-                { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' },
-                { href: 'https://chat.openai.com/', icon: 'icon-self-chatgpticon', text: 'ChatGPT官方' },
-                { href: 'https://test.hyper-ai.top/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' },
-                { href: 'https://bard.google.com/chat', icon: 'icon-self-googlebard', text: 'Bard' },
-                { href: 'https://xinghuo.xfyun.cn/desk/', icon: 'icon-self-xunfeichatgpt', text: '讯飞星火' },
-                { href: 'https://yiyan.baidu.com/', icon: 'icon-self-baiduchatgpt', text: '文心一言' },
-                { href: 'https://discord.com/channels/@me', icon: 'icon-self-discord', text: 'Discord' },
             ]
         },
         {
@@ -216,8 +186,36 @@ function myFunction() {
             ]
         }
     ];
+    var secondList = [
+        // {
+        //     title: '热门常用',
+        //     icon: 'icon-remen',
+        //     items: [
+        //         { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' },
+        //     ]
+        // },
+        {
+            title: '私有云',
+            icon: 'icon-self-siyouyun',
+            items: [
+                { href: 'https://alist.yq59.top/', icon: 'icon-self-alist', text: '文件列表' },
+                { href: 'https://photo.yq59.top/', icon: 'icon-self-xiangce', text: '相册' },
+                { href: 'https://ariang.yq59.top/', icon: 'icon-self-aria2', text: 'AriaNg' }
+            ]
+        },
+        {
+            title: '家庭服务',
+            icon: 'icon-self-faxianye_jia_jiating',
+            items: [
+                { href: 'http://192.168.68.182:9978/', icon: 'icon-self-tv_airplay_line', text: 'TVBOX' },
+                { href: 'https://v2ray.yq59.top/', icon: 'icon-self-V2raya_A', text: 'v2rayA' },
+                { href: 'https://ql.yq59.top/', icon: 'icon-self-dragon', text: '青龙' },
+                { href: 'https://cups.yq59.top/', icon: 'icon-self-dayinji', text: 'cups' }
+            ]
+        },
+    ];
 
-    urlListToElement(secondList, 'beforeend');
+    urlListToElement(fristList, 'afterbegin');
 
     setTimeout(() => {
         supportsIPv6()
@@ -234,10 +232,14 @@ function myFunction() {
             console.log('IPv6 is not supported.');
         })
         .finally(() => {
-            urlListToElement(fristList, 'afterbegin');
+            urlListToElement(secondList, 'beforeend');
         });
     },10);
 }
 
 // 使用事件监听器绑定 "load" 事件
-window.addEventListener('load', myFunction);
+// window.addEventListener('load', myFunction);
+
+$(function () {
+    myFunction();
+});
