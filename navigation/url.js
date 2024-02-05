@@ -222,7 +222,7 @@ function myFunction() {
         .then((res) => {
             console.log('IPv6 is supported.');
             // 根据条件更新href值
-            fristList.forEach((category) => {
+            secondList.forEach((category) => {
                 category.items.forEach((item) => {
                     item.href = updateHref(item.href);
                 });
