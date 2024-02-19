@@ -240,6 +240,7 @@ function myFunction() {
 // 使用事件监听器绑定 "load" 事件
 // window.addEventListener('load', myFunction);
 
-$(function () {
-    myFunction();
-});
+myFunction();
+// $(function () {
+//     myFunction();
+// });
