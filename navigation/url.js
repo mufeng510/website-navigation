@@ -81,6 +81,7 @@ function myFunction() {
                 // { href: 'http://www.w3school.com.cn/', icon: 'icon-h5', text: 'W3school' },
                 // { href: 'https://www.swiper.com.cn/', icon: 'icon-S', text: 'Swiper' }
                 { href: 'https://www.iconfont.cn/', icon: 'icon-iconfont', text: '阿里图标' },
+                { href: 'https://image.yq59.top/', icon: 'icon-self-xiangce1', text: '图床' },
             ]
         },
         {
@@ -129,14 +130,14 @@ function myFunction() {
                 { href: 'https://www.555yy1.com/', icon: 'icon-yunbo', text: '555影视' }
             ]
         },
-        {
-            title: '购物',
-            icon: 'icon-gouwuche',
-            items: [
-                { href: 'https://www.jd.com', icon: 'icon-jingdong', text: '京东' },
-                { href: 'https://www.amazon.com/', icon: 'icon-amazon', text: '亚马逊' },
-            ]
-        },
+        // {
+        //     title: '购物',
+        //     icon: 'icon-gouwuche',
+        //     items: [
+        //         { href: 'https://www.jd.com', icon: 'icon-jingdong', text: '京东' },
+        //         { href: 'https://www.amazon.com/', icon: 'icon-amazon', text: '亚马逊' },
+        //     ]
+        // },
         // {
         //     title: '设计视觉',
         //     icon: 'icon-sheji',
