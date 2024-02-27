@@ -82,6 +82,7 @@ function myFunction() {
                 // { href: 'https://www.swiper.com.cn/', icon: 'icon-S', text: 'Swiper' }
                 { href: 'https://www.iconfont.cn/', icon: 'icon-iconfont', text: '阿里图标' },
                 { href: 'https://image.yq59.top/', icon: 'icon-self-xiangce1', text: '图床' },
+                { href: 'https://app.apifox.com/main', icon: 'icon-self-apifox', text: 'apifox' },
             ]
         },
         {
@@ -100,14 +101,17 @@ function myFunction() {
             title: '工具',
             icon: 'icon-ai-tool',
             items: [
+                { href: 'https://123apps.com/cn/', icon: 'icon-self-logo', text: '文件工具' },
                 { href: 'https://tools.miku.ac/', icon: 'icon-ai-tool', text: 'Miku工具' },
-                { href: 'https://ip233.cn/', icon: 'icon-wangluo', text: 'IP查询' },
+                { href: 'https://waifu2x.udp.jp/?tdsourcetag=s_pctim_aiomsg', icon: 'icon-self-gonggong-gongjulan-shangjiaobiaopx', text: '图片放大' },
+                { href: 'https://www.gaitubao.com/', icon: 'icon-self-tubiaozhizuomoban', text: '改图宝' },
                 { href: 'https://translate.google.com/?hl=zh-CN', icon: 'icon-fanyi', text: '谷歌翻译' },
                 { href: 'https://feedly.com', icon: 'icon-feedly', text: 'Feedly' },
                 { href: 'https://pandao.github.io/editor.md/index.html', icon: 'icon-md', text: 'MD编辑器' },
                 // { href: 'http://cubic-bezier.com', icon: 'icon-quxian', text: '贝赛尔曲线' },
                 { href: 'https://5iux.cn/base64/', icon: 'icon-base64', text: 'Base64' },
                 // { href: 'https://javascriptobfuscator.com/Javascript-Obfuscator.aspx', icon: 'icon-jshunxiao', text: 'JS混淆器' },
+                { href: 'https://ip233.cn/', icon: 'icon-wangluo', text: 'IP查询' },
                 { href: 'https://ping.pe', icon: 'icon-wangluo1', text: 'Ping.pe' },
                 { href: 'https://ping.chinaz.com/', icon: 'icon-pingup', text: '站长Ping' },
                 // { href: 'https://apkdl.in/', icon: 'icon-anzhuo', text: 'APK下载' }
