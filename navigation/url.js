@@ -188,6 +188,7 @@ function myFunction() {
                 { href: 'https://duckduckgo.com/', icon: 'icon-duck', text: 'DuckGo' },
                 { href: 'https://www.sogou.com/', icon: 'icon-sougou', text: '搜狗' },
                 { href: 'https://www.naver.com/', icon: 'icon-icon-test', text: 'NAVER' },
+                { href: 'https://www.jiumodiary.com/', icon: 'icon-self-J', text: '鸠摩' },
             ]
         }
     ];
