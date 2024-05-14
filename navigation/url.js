@@ -47,24 +47,31 @@ function urlListToElement(list, position){
     });
 
     // 将 HTML 字符串填充到 ul 元素中
-    // ulElement.innerHTML = htmlString;
     ulElement.insertAdjacentHTML(position, htmlString);
 }
 
 function myFunction() {
     var fristList = [
         {
+            title: '热门常用',
+            icon: 'icon-remen',
+            items: [
+                { href: 'https://ankiweb.net/', icon: 'icon-self-anki', text: 'Anki' },
+                { href: 'https://filehelper.weixin.qq.com/', icon: 'icon-self-weixinwenjian', text: '文件传输助手' },
+            ]
+        },
+        {
             title: 'AI大模型',
             icon: 'icon-self-rengongzhineng',
             items: [
+                { href: 'https://chat.openai.com/', icon: 'icon-self-chatgpticon', text: '官方ChatGPT' },
+                { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
                 { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' },
-                { href: 'https://test.hyper-ai.top:4443/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' },
-                { href: 'https://chat.openai.com/', icon: 'icon-self-chatgpticon', text: 'ChatGPT官方' },
+                { href: 'http://public.agent-matrix.com:12311/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' },
                 { href: 'https://bard.google.com/chat', icon: 'icon-self-googlebard', text: 'Bard' },
                 { href: 'https://xinghuo.xfyun.cn/desk/', icon: 'icon-self-xunfeichatgpt', text: '讯飞星火' },
                 { href: 'https://yiyan.baidu.com/', icon: 'icon-self-baiduchatgpt', text: '文心一言' },
                 { href: 'https://discord.com/channels/@me', icon: 'icon-self-discord', text: 'Discord' },
-                { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
             ]
         },
         {
@@ -72,14 +79,7 @@ function myFunction() {
             icon: 'icon-kongzhitai',
             items: [
                 { href: 'https://github.com/', icon: 'icon-github', text: 'Github' },
-                // { href: 'https://codepen.io/', icon: 'icon-codepen', text: 'Codepen' },
-                // { href: 'https://segmentfault.com/', icon: 'icon-msg', text: 'SF思否' },
-                // { href: 'https://cdnjs.com/', icon: 'icon-cdnjs', text: 'CdnJs' },
-                // { href: 'https://fontawesome.com/icons?d=gallery&m=free', icon: 'icon-font-awesome', text: 'Font A.' },
-                // { href: 'https://msdn.itellyou.cn/', icon: 'icon-windows', text: 'MSDN下载' },
                 { href: 'https://dash.cloudflare.com/', icon: 'icon-cloudflare', text: 'C. flare' },
-                // { href: 'http://www.w3school.com.cn/', icon: 'icon-h5', text: 'W3school' },
-                // { href: 'https://www.swiper.com.cn/', icon: 'icon-S', text: 'Swiper' }
                 { href: 'https://www.iconfont.cn/', icon: 'icon-iconfont', text: '阿里图标' },
                 { href: 'https://image.yq59.top/', icon: 'icon-self-xiangce1', text: '图床' },
                 { href: 'https://app.apifox.com/main', icon: 'icon-self-apifox', text: 'apifox' },
@@ -106,34 +106,113 @@ function myFunction() {
                 { href: 'https://waifu2x.udp.jp/?tdsourcetag=s_pctim_aiomsg', icon: 'icon-self-gonggong-gongjulan-shangjiaobiaopx', text: '图片放大' },
                 { href: 'https://www.gaitubao.com/', icon: 'icon-self-tubiaozhizuomoban', text: '改图宝' },
                 { href: 'https://translate.google.com/?hl=zh-CN', icon: 'icon-fanyi', text: '谷歌翻译' },
-                { href: 'https://feedly.com', icon: 'icon-feedly', text: 'Feedly' },
-                { href: 'https://pandao.github.io/editor.md/index.html', icon: 'icon-md', text: 'MD编辑器' },
-                // { href: 'http://cubic-bezier.com', icon: 'icon-quxian', text: '贝赛尔曲线' },
-                { href: 'https://5iux.cn/base64/', icon: 'icon-base64', text: 'Base64' },
-                // { href: 'https://javascriptobfuscator.com/Javascript-Obfuscator.aspx', icon: 'icon-jshunxiao', text: 'JS混淆器' },
                 { href: 'https://ip233.cn/', icon: 'icon-wangluo', text: 'IP查询' },
-                { href: 'https://ping.pe', icon: 'icon-wangluo1', text: 'Ping.pe' },
                 { href: 'https://ping.chinaz.com/', icon: 'icon-pingup', text: '站长Ping' },
-                // { href: 'https://apkdl.in/', icon: 'icon-anzhuo', text: 'APK下载' }
+            ]
+        }
+    ];
+    var secondList = [
+        {
+            title: '私有云',
+            icon: 'icon-self-siyouyun',
+            items: [
+                { href: 'https://alist.yq59.top/', icon: 'icon-self-alist', text: '文件列表' },
+                { href: 'https://photo.yq59.top/', icon: 'icon-self-xiangce', text: '相册' },
+                { href: 'https://ariang.yq59.top/', icon: 'icon-self-aria2', text: 'AriaNg' }
             ]
         },
         {
-            title: '视频媒体',
-            icon: 'icon-shipin',
+            title: '家庭服务',
+            icon: 'icon-self-faxianye_jia_jiating',
             items: [
-                // { href: 'https://v.qq.com/', icon: 'icon-tengxunshipin', text: '腾讯视频' },
-                // { href: 'https://www.youku.com/', icon: 'icon-youku', text: '优酷' },
-                // { href: 'https://www.iqiyi.com/', icon: 'icon-aiqiyi', text: '爱奇艺' },
-                // { href: 'https://tv.cctv.com/live/index.shtml', icon: 'icon-cctv', text: 'CCTV直播' },
-                { href: 'https://www.youtube.com/', icon: 'icon-youtube', text: 'Youtube' },
-                // { href: 'http://www.acfun.cn/index.html', icon: 'icon-acfun', text: 'ACFUN' },
-                { href: 'https://pianyuan.org/', icon: 'icon-yingshi', text: '片源网' },
-                { href: 'http://www.slimego.cn/', icon: 'icon-shilaimu', text: '史莱姆' },
-                { href: 'https://www.douban.com/', icon: 'icon-douban', text: '豆瓣' },
-                { href: 'https://www.bilibili.com/', icon: 'icon-bili', text: '哔哩哔哩' },
-                { href: 'https://www.555yy1.com/', icon: 'icon-yunbo', text: '555影视' }
+                { href: 'http://192.168.68.182:9978/', icon: 'icon-self-tv_airplay_line', text: 'TVBOX' },
+                { href: 'https://v2ray.yq59.top/', icon: 'icon-self-V2raya_A', text: 'v2rayA' },
+                { href: 'https://ql.yq59.top/', icon: 'icon-self-dragon', text: '青龙' },
+                { href: 'https://cups.yq59.top/', icon: 'icon-self-dayinji', text: 'cups' }
             ]
         },
+    ];
+    var thirdList = [
+        {
+            title: '论坛资讯',
+            icon: 'icon-msg',
+            items: [
+                { href: 'https://www.52pojie.cn/', icon: 'icon-theater-masks', text: '吾爱破解' },
+                { href: 'https://www.v2ex.com/', icon: 'icon-v2ex', text: 'V2EX' },
+            ]
+        },
+        {
+            title: '邮箱',
+            icon: 'icon-youxiang',
+            items: [
+                { href: 'https://mail.google.com/mail/u/0/#inbox', icon: 'icon-gmail', text: 'Gmail' },
+                { href: 'https://outlook.live.com/mail/', icon: 'icon-windows', text: 'Hotmail' },
+                { href: 'https://mail.163.com/', icon: 'icon-wangyi', text: '163网易邮箱' },
+                { href: 'https://mail.sina.com.cn/', icon: 'icon-xinlangwang', text: '新浪邮箱' },
+                { href: 'https://mail.qq.com/', icon: 'icon-QQ', text: 'QQ邮箱' },
+                { href: 'https://qiye.aliyun.com/', icon: 'icon-yunyouxiang', text: '阿里邮箱' }
+            ]
+        }
+    ]
+
+    urlListToElement(fristList, 'afterbegin');
+
+    setTimeout(() => {
+        supportsIPv6()
+        .then((res) => {
+            console.log('IPv6 is supported.');
+            // 根据条件更新href值
+            secondList.forEach((category) => {
+                category.items.forEach((item) => {
+                    item.href = updateHref(item.href);
+                });
+            });
+        })
+        .catch(() => {
+            console.log('IPv6 is not supported.');
+        })
+        .finally(() => {
+            urlListToElement(secondList, 'beforeend');
+            urlListToElement(thirdList, 'beforeend');
+        });
+    },10);
+}
+
+myFunction();
+
+//#region 一些暂时不用的网站
+                // { href: 'https://codepen.io/', icon: 'icon-codepen', text: 'Codepen' },
+                // { href: 'https://segmentfault.com/', icon: 'icon-msg', text: 'SF思否' },
+                // { href: 'https://cdnjs.com/', icon: 'icon-cdnjs', text: 'CdnJs' },
+                // { href: 'https://fontawesome.com/icons?d=gallery&m=free', icon: 'icon-font-awesome', text: 'Font A.' },
+                // { href: 'https://msdn.itellyou.cn/', icon: 'icon-windows', text: 'MSDN下载' },
+                // { href: 'http://www.w3school.com.cn/', icon: 'icon-h5', text: 'W3school' },
+                // { href: 'https://www.swiper.com.cn/', icon: 'icon-S', text: 'Swiper' }
+
+                // { href: 'https://feedly.com', icon: 'icon-feedly', text: 'Feedly' },
+                // { href: 'https://pandao.github.io/editor.md/index.html', icon: 'icon-md', text: 'MD编辑器' },
+                // { href: 'http://cubic-bezier.com', icon: 'icon-quxian', text: '贝赛尔曲线' },
+                // { href: 'https://5iux.cn/base64/', icon: 'icon-base64', text: 'Base64' },
+                // { href: 'https://javascriptobfuscator.com/Javascript-Obfuscator.aspx', icon: 'icon-jshunxiao', text: 'JS混淆器' },
+                // { href: 'https://ping.pe', icon: 'icon-wangluo1', text: 'Ping.pe' },
+                // { href: 'https://apkdl.in/', icon: 'icon-anzhuo', text: 'APK下载' }
+        // {
+        //     title: '视频媒体',
+        //     icon: 'icon-shipin',
+        //     items: [
+        //         // { href: 'https://v.qq.com/', icon: 'icon-tengxunshipin', text: '腾讯视频' },
+        //         // { href: 'https://www.youku.com/', icon: 'icon-youku', text: '优酷' },
+        //         // { href: 'https://www.iqiyi.com/', icon: 'icon-aiqiyi', text: '爱奇艺' },
+        //         // { href: 'https://tv.cctv.com/live/index.shtml', icon: 'icon-cctv', text: 'CCTV直播' },
+        //         { href: 'https://www.youtube.com/', icon: 'icon-youtube', text: 'Youtube' },
+        //         // { href: 'http://www.acfun.cn/index.html', icon: 'icon-acfun', text: 'ACFUN' },
+        //         { href: 'https://pianyuan.org/', icon: 'icon-yingshi', text: '片源网' },
+        //         { href: 'http://www.slimego.cn/', icon: 'icon-shilaimu', text: '史莱姆' },
+        //         { href: 'https://www.douban.com/', icon: 'icon-douban', text: '豆瓣' },
+        //         { href: 'https://www.bilibili.com/', icon: 'icon-bili', text: '哔哩哔哩' },
+        //         { href: 'https://www.555yy1.com/', icon: 'icon-yunbo', text: '555影视' }
+        //     ]
+        // },
         // {
         //     title: '购物',
         //     icon: 'icon-gouwuche',
@@ -155,98 +234,21 @@ function myFunction() {
         //         { href: 'https://huaban.com/', icon: 'icon-huaban', text: '花瓣' }
         //     ]
         // },
-        {
-            title: '论坛资讯',
-            icon: 'icon-msg',
-            items: [
-                { href: 'https://www.52pojie.cn/', icon: 'icon-theater-masks', text: '吾爱破解' },
-                { href: 'https://www.zhihu.com/', icon: 'icon-zhihu', text: '知乎' },
-                { href: 'https://www.jianshu.com/', icon: 'icon-jianshu', text: '简书' },
+                // { href: 'https://www.zhihu.com/', icon: 'icon-zhihu', text: '知乎' },
+                // { href: 'https://www.jianshu.com/', icon: 'icon-jianshu', text: '简书' },
                 // { href: 'https://www.weibo.com', icon: 'icon-weibo', text: '微博' },
-                { href: 'https://www.v2ex.com/', icon: 'icon-v2ex', text: 'V2EX' },
-                { href: 'https://www.instagram.com', icon: 'icon-instagram', text: 'Instagram' },
-                { href: 'https://www.twitter.com', icon: 'icon-twitter', text: 'Twitter' },
-                { href: 'https://www.facebook.com', icon: 'icon-facebook', text: 'Facebook' }
-            ]
-        },
-        {
-            title: '邮箱',
-            icon: 'icon-youxiang',
-            items: [
-                { href: 'https://mail.google.com/mail/u/0/#inbox', icon: 'icon-gmail', text: 'Gmail' },
-                { href: 'https://outlook.live.com/mail/', icon: 'icon-windows', text: 'Hotmail' },
-                { href: 'https://mail.163.com/', icon: 'icon-wangyi', text: '163网易邮箱' },
-                { href: 'https://mail.sina.com.cn/', icon: 'icon-xinlangwang', text: '新浪邮箱' },
-                { href: 'https://mail.qq.com/', icon: 'icon-QQ', text: 'QQ邮箱' },
-                { href: 'https://qiye.aliyun.com/', icon: 'icon-yunyouxiang', text: '阿里邮箱' }
-            ]
-        },
-        {
-            title: '搜索引擎',
-            icon: 'icon-sousuo',
-            items: [
-                { href: 'https://duckduckgo.com/', icon: 'icon-duck', text: 'DuckGo' },
-                { href: 'https://www.sogou.com/', icon: 'icon-sougou', text: '搜狗' },
-                { href: 'https://www.naver.com/', icon: 'icon-icon-test', text: 'NAVER' },
-                { href: 'https://www.jiumodiary.com/', icon: 'icon-self-J', text: '鸠摩' },
-            ]
-        }
-    ];
-    var secondList = [
+                // { href: 'https://www.instagram.com', icon: 'icon-instagram', text: 'Instagram' },
+                // { href: 'https://www.twitter.com', icon: 'icon-twitter', text: 'Twitter' },
+                // { href: 'https://www.facebook.com', icon: 'icon-facebook', text: 'Facebook' }
+
         // {
-        //     title: '热门常用',
-        //     icon: 'icon-remen',
+        //     title: '搜索引擎',
+        //     icon: 'icon-sousuo',
         //     items: [
-        //         { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' },
+        //         { href: 'https://duckduckgo.com/', icon: 'icon-duck', text: 'DuckGo' },
+        //         { href: 'https://www.sogou.com/', icon: 'icon-sougou', text: '搜狗' },
+        //         { href: 'https://www.naver.com/', icon: 'icon-icon-test', text: 'NAVER' },
+        //         { href: 'https://www.jiumodiary.com/', icon: 'icon-self-J', text: '鸠摩' },
         //     ]
-        // },
-        {
-            title: '私有云',
-            icon: 'icon-self-siyouyun',
-            items: [
-                { href: 'https://alist.yq59.top/', icon: 'icon-self-alist', text: '文件列表' },
-                { href: 'https://photo.yq59.top/', icon: 'icon-self-xiangce', text: '相册' },
-                { href: 'https://ariang.yq59.top/', icon: 'icon-self-aria2', text: 'AriaNg' }
-            ]
-        },
-        {
-            title: '家庭服务',
-            icon: 'icon-self-faxianye_jia_jiating',
-            items: [
-                { href: 'http://192.168.68.182:9978/', icon: 'icon-self-tv_airplay_line', text: 'TVBOX' },
-                { href: 'https://v2ray.yq59.top/', icon: 'icon-self-V2raya_A', text: 'v2rayA' },
-                { href: 'https://ql.yq59.top/', icon: 'icon-self-dragon', text: '青龙' },
-                { href: 'https://cups.yq59.top/', icon: 'icon-self-dayinji', text: 'cups' }
-            ]
-        },
-    ];
-
-    urlListToElement(fristList, 'afterbegin');
-
-    setTimeout(() => {
-        supportsIPv6()
-        .then((res) => {
-            console.log('IPv6 is supported.');
-            // 根据条件更新href值
-            secondList.forEach((category) => {
-                category.items.forEach((item) => {
-                    item.href = updateHref(item.href);
-                });
-            });
-        })
-        .catch(() => {
-            console.log('IPv6 is not supported.');
-        })
-        .finally(() => {
-            urlListToElement(secondList, 'beforeend');
-        });
-    },10);
-}
-
-// 使用事件监听器绑定 "load" 事件
-// window.addEventListener('load', myFunction);
-
-myFunction();
-// $(function () {
-//     myFunction();
-// });
+        // }
+//#endregion
