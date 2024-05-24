@@ -81,7 +81,6 @@ function myFunction() {
                 { href: 'https://github.com/', icon: 'icon-github', text: 'Github' },
                 { href: 'https://dash.cloudflare.com/', icon: 'icon-cloudflare', text: 'C. flare' },
                 { href: 'https://www.iconfont.cn/', icon: 'icon-iconfont', text: '阿里图标' },
-                { href: 'https://image.yq59.top/', icon: 'icon-self-xiangce1', text: '图床' },
                 { href: 'https://app.apifox.com/main', icon: 'icon-self-apifox', text: 'apifox' },
             ]
         },
@@ -118,7 +117,8 @@ function myFunction() {
             items: [
                 { href: 'https://alist.yq59.top/', icon: 'icon-self-alist', text: '文件列表' },
                 { href: 'https://photo.yq59.top/', icon: 'icon-self-xiangce', text: '相册' },
-                { href: 'https://ariang.yq59.top/', icon: 'icon-self-aria2', text: 'AriaNg' }
+                { href: 'https://ariang.yq59.top/', icon: 'icon-self-aria2', text: 'AriaNg' },
+                { href: 'https://image.yq59.top/', icon: 'icon-self-xiangce1', text: '图床' }
             ]
         },
         {
@@ -126,7 +126,7 @@ function myFunction() {
             icon: 'icon-self-faxianye_jia_jiating',
             items: [
                 { href: 'http://192.168.68.182:9978/', icon: 'icon-self-tv_airplay_line', text: 'TVBOX' },
-                { href: 'https://v2ray.yq59.top/', icon: 'icon-self-V2raya_A', text: 'v2rayA' },
+                // { href: 'https://v2ray.yq59.top/', icon: 'icon-self-V2raya_A', text: 'v2rayA' },
                 { href: 'https://ql.yq59.top/', icon: 'icon-self-dragon', text: '青龙' },
                 { href: 'https://cups.yq59.top/', icon: 'icon-self-dayinji', text: 'cups' }
             ]
@@ -162,11 +162,14 @@ function myFunction() {
         .then((res) => {
             console.log('IPv6 is supported.');
             // 根据条件更新href值
-            secondList.forEach((category) => {
+            var secondListCopy = JSON.parse(JSON.stringify(secondList));
+            secondListCopy.forEach((category) => {
+                category.title = category.title + ' (IPv6 速度更快，但可能需要多次刷新才能打开)';
                 category.items.forEach((item) => {
                     item.href = updateHref(item.href);
                 });
             });
+            secondList = [...secondListCopy, ...secondList];
         })
         .catch(() => {
             console.log('IPv6 is not supported.');
