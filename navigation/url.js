@@ -164,7 +164,7 @@ function myFunction() {
             // 根据条件更新href值
             var secondListCopy = JSON.parse(JSON.stringify(secondList));
             secondListCopy.forEach((category) => {
-                category.title = category.title + ' (IPv6 速度更快，但可能需要多次刷新才能打开)';
+                category.title = category.title + ' (v6 更快，可能需要多次刷新)';
                 category.items.forEach((item) => {
                     item.href = updateHref(item.href);
                 });
