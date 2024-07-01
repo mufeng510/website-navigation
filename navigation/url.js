@@ -56,6 +56,7 @@ function myFunction() {
             title: '热门常用',
             icon: 'icon-remen',
             items: [
+                { href: 'https://weread.qq.com/', icon: 'icon-self-weixindushu', text: '微信读书' },
                 { href: 'https://ankiweb.net/', icon: 'icon-self-anki', text: 'Anki' },
                 { href: 'https://filehelper.weixin.qq.com/', icon: 'icon-self-weixinwenjian', text: '文件传输助手' },
             ]
