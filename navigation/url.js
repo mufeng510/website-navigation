@@ -158,6 +158,7 @@ function myFunction() {
     ]
 
     urlListToElement(fristList, 'afterbegin');
+    urlListToElement(secondList, 'beforeend');
 
     setTimeout(() => {
         supportsIPv6()
@@ -171,13 +172,13 @@ function myFunction() {
                     item.href = updateHref(item.href);
                 });
             });
-            secondList = [...secondListCopy, ...secondList];
+            // secondList = [...secondListCopy, ...secondList];
+            urlListToElement(secondListCopy, 'beforeend');
         })
         .catch(() => {
             console.log('IPv6 is not supported.');
         })
         .finally(() => {
-            urlListToElement(secondList, 'beforeend');
             urlListToElement(thirdList, 'beforeend');
         });
     },10);
