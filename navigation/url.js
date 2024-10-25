@@ -156,32 +156,40 @@ function myFunction() {
             ]
         }
     ]
-
-    urlListToElement(fristList, 'afterbegin');
-    urlListToElement(secondList, 'beforeend');
-
-    setTimeout(() => {
-        supportsIPv6()
-        .then((res) => {
-            console.log('IPv6 is supported.');
-            // 根据条件更新href值
-            var secondListCopy = JSON.parse(JSON.stringify(secondList));
-            secondListCopy.forEach((category) => {
-                category.title = category.title + ' (v6 更快,可能要多次刷新)';
-                category.items.forEach((item) => {
-                    item.href = updateHref(item.href);
-                });
-            });
-            // secondList = [...secondListCopy, ...secondList];
-            urlListToElement(secondListCopy, 'beforeend');
-        })
-        .catch(() => {
-            console.log('IPv6 is not supported.');
-        })
-        .finally(() => {
-            urlListToElement(thirdList, 'beforeend');
+    var secondListCopy = JSON.parse(JSON.stringify(secondList));
+    secondListCopy.forEach((category) => {
+        category.title = category.title + ' (v6 更快,可能要多次刷新)';
+        category.items.forEach((item) => {
+            item.href = updateHref(item.href);
         });
-    },10);
+    });
+    urlListToElement([...fristList, ...secondList, ...secondListCopy, ...thirdList], 'afterbegin');
+
+    // urlListToElement(fristList, 'afterbegin');
+    // urlListToElement(secondList, 'beforeend');
+
+    // setTimeout(() => {
+    //     supportsIPv6()
+    //     .then((res) => {
+    //         console.log('IPv6 is supported.');
+    //         // 根据条件更新href值
+    //         var secondListCopy = JSON.parse(JSON.stringify(secondList));
+    //         secondListCopy.forEach((category) => {
+    //             category.title = category.title + ' (v6 更快,可能要多次刷新)';
+    //             category.items.forEach((item) => {
+    //                 item.href = updateHref(item.href);
+    //             });
+    //         });
+    //         // secondList = [...secondListCopy, ...secondList];
+    //         urlListToElement(secondListCopy, 'beforeend');
+    //     })
+    //     .catch(() => {
+    //         console.log('IPv6 is not supported.');
+    //     })
+    //     .finally(() => {
+    //         urlListToElement(thirdList, 'beforeend');
+    //     });
+    // },10);
 }
 
 myFunction();
