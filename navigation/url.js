@@ -70,11 +70,12 @@ function myFunction() {
                 { href: 'https://chat.openai.com/', icon: 'icon-self-chatgpticon', text: '官方ChatGPT' },
                 { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
                 { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' },
+                { href: 'https://chat.deepseek.com/', icon: 'icon-self-deepseek', text: 'DeepSeek' },
                 // { href: 'http://public.agent-matrix.com:12311/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' },
-                { href: 'https://bard.google.com/chat', icon: 'icon-self-googlebard', text: 'Bard' },
-                { href: 'https://xinghuo.xfyun.cn/desk/', icon: 'icon-self-xunfeichatgpt', text: '讯飞星火' },
-                { href: 'https://yiyan.baidu.com/', icon: 'icon-self-baiduchatgpt', text: '文心一言' },
-                { href: 'https://discord.com/channels/@me', icon: 'icon-self-discord', text: 'Discord' }
+                // { href: 'https://bard.google.com/chat', icon: 'icon-self-googlebard', text: 'Bard' },
+                // { href: 'https://xinghuo.xfyun.cn/desk/', icon: 'icon-self-xunfeichatgpt', text: '讯飞星火' },
+                // { href: 'https://yiyan.baidu.com/', icon: 'icon-self-baiduchatgpt', text: '文心一言' },
+                // { href: 'https://discord.com/channels/@me', icon: 'icon-self-discord', text: 'Discord' }
             ]
         },
         {
