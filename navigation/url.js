@@ -70,7 +70,7 @@ function myFunction() {
                 { href: 'https://chat.openai.com/', icon: 'icon-self-chatgpticon', text: '官方ChatGPT' },
                 { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
                 { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' },
-                { href: 'https://chat.deepseek.com/', icon: 'icon-self-deepseek', text: 'DeepSeek' },
+                { href: 'https://chat.deepseek.com/', icon: 'icon-self-deepseek', text: 'DeepSeek' }
                 // { href: 'http://public.agent-matrix.com:12311/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' },
                 // { href: 'https://bard.google.com/chat', icon: 'icon-self-googlebard', text: 'Bard' },
                 // { href: 'https://xinghuo.xfyun.cn/desk/', icon: 'icon-self-xunfeichatgpt', text: '讯飞星火' },
@@ -147,6 +147,7 @@ function myFunction() {
             ]
         }
     ];
+    // 添加ipv6直链
     var secondListCopy = JSON.parse(JSON.stringify(secondList));
     secondListCopy.forEach((category) => {
         category.title = category.title + ' (v6 更快,可能要多次刷新)';
@@ -154,33 +155,24 @@ function myFunction() {
             item.href = updateHref(item.href);
         });
     });
-    // urlListToElement([...fristList, ...secondList, ...secondListCopy, ...thirdList], 'afterbegin');
+    urlListToElement([...fristList, ...secondList, ...secondListCopy, ...thirdList], 'afterbegin');
 
-    urlListToElement(fristList, 'afterbegin');
-    urlListToElement(secondList, 'beforeend');
+    // urlListToElement(fristList, 'afterbegin');
+    // urlListToElement(secondList, 'beforeend');
 
-    setTimeout(() => {
-        supportsIPv6()
-            .then((res) => {
-                console.log('IPv6 is supported.');
-                // 根据条件更新href值
-                var secondListCopy = JSON.parse(JSON.stringify(secondList));
-                secondListCopy.forEach((category) => {
-                    category.title = category.title + ' (v6 更快,可能要多次刷新)';
-                    category.items.forEach((item) => {
-                        item.href = updateHref(item.href);
-                    });
-                });
-                // secondList = [...secondListCopy, ...secondList];
-                urlListToElement(secondListCopy, 'beforeend');
-            })
-            .catch(() => {
-                console.log('IPv6 is not supported.');
-            })
-            .finally(() => {
-                urlListToElement(thirdList, 'beforeend');
-            });
-    }, 10);
+    // setTimeout(() => {
+    //     supportsIPv6()
+    //         .then((res) => {
+    //             console.log('IPv6 is supported.');
+    //             urlListToElement(secondListCopy, 'beforeend');
+    //         })
+    //         .catch(() => {
+    //             console.log('IPv6 is not supported.');
+    //         })
+    //         .finally(() => {
+    //             urlListToElement(thirdList, 'beforeend');
+    //         });
+    // }, 10);
 }
 
 myFunction();
