@@ -72,6 +72,7 @@ function myFunction() {
                 { href: 'https://gemini.google.com/', icon: 'icon-self-googlebard', text: 'Gemini' },
                 { href: 'https://yuanbao.tencent.com/', icon: 'icon-self-tengxunyuanbao', text: '元宝' },
                 { href: 'https://chat.deepseek.com/', icon: 'icon-self-deepseek', text: 'DeepSeek' },
+                { href: 'https://www.doubao.com/chat/', icon: 'icon-self-doubao', text: '豆包' },
                 { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
                 { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' }
                 // { href: 'http://public.agent-matrix.com:12311/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' },
