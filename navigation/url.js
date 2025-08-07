@@ -158,7 +158,7 @@ function myFunction() {
             item.href = updateHref(item.href);
         });
     });
-    urlListToElement([...fristList, ...secondList, ...secondListCopy, ...thirdList], 'afterbegin');
+    urlListToElement([...fristList, ...secondListCopy, ...secondList, ...thirdList], 'afterbegin');
 
     // urlListToElement(fristList, 'afterbegin');
     // urlListToElement(secondList, 'beforeend');
