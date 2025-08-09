@@ -56,13 +56,13 @@ function myFunction() {
             title: '热门常用',
             icon: 'icon-remen',
             items: [
-                { href: 'https://filehelper.weixin.qq.com/', icon: 'icon-self-weixinwenjian', text: '文件传输助手' }
+                { href: 'https://filehelper.weixin.qq.com/', icon: 'icon-self-weixinwenjian', text: '文件传输助手' },
                 { href: 'https://weread.qq.com/', icon: 'icon-self-weixindushu', text: '微信读书' },
                 { href: 'https://webapp.songy.info/', icon: 'icon-self-daoshi', text: '学升' },
                 { href: 'https://mubu.com/app', icon: 'icon-self-logo1', text: '幕布' },
                 { href: 'https://to-do.live.com/tasks', icon: 'icon-self-TODO_INFO', text: 'Todo' },
                 { href: 'https://ankiweb.net/', icon: 'icon-self-anki', text: 'Anki' },
-                { href: 'https://book.douban.com/', icon: 'icon-self-douban', text: '豆瓣读书' },
+                { href: 'https://book.douban.com/', icon: 'icon-self-douban', text: '豆瓣读书' }
             ]
         },
         {
@@ -73,7 +73,7 @@ function myFunction() {
                 { href: 'https://gemini.google.com/', icon: 'icon-self-googlebard', text: 'Gemini' },
                 { href: 'https://yuanbao.tencent.com/', icon: 'icon-self-tengxunyuanbao', text: '元宝' },
                 { href: 'https://chat.deepseek.com/', icon: 'icon-self-deepseek', text: 'DeepSeek' },
-                { href: 'https://www.doubao.com/chat/', icon: 'icon-self-doubao', text: '豆包' },
+                { href: 'https://www.doubao.com/chat/', icon: 'icon-self-doubao', text: '豆包' }
                 // { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
                 // { href: 'https://lobe.vercel.yq59.top/', icon: 'icon-self-lobe', text: 'Lobe Chat' }
                 // { href: 'http://public.agent-matrix.com:12311/', icon: 'icon-self-xueshubaogao', text: 'GPT学术优化' },
