@@ -56,13 +56,13 @@ function myFunction() {
             title: '热门常用',
             icon: 'icon-remen',
             items: [
-                { href: 'https://filehelper.weixin.qq.com/', icon: 'icon-self-weixinwenjian', text: '文件传输助手' },
-                { href: 'https://weread.qq.com/', icon: 'icon-self-weixindushu', text: '微信读书' },
                 { href: 'https://webapp.songy.info/', icon: 'icon-self-daoshi', text: '学升' },
                 { href: 'https://mubu.com/app', icon: 'icon-self-logo1', text: '幕布' },
                 { href: 'https://to-do.live.com/tasks', icon: 'icon-self-TODO_INFO', text: 'Todo' },
                 { href: 'https://ankiweb.net/', icon: 'icon-self-anki', text: 'Anki' },
-                { href: 'https://book.douban.com/', icon: 'icon-self-douban', text: '豆瓣读书' }
+                { href: 'https://weread.qq.com/', icon: 'icon-self-weixindushu', text: '微信读书' },
+                { href: 'https://book.douban.com/', icon: 'icon-self-douban', text: '豆瓣读书' },
+                { href: 'https://filehelper.weixin.qq.com/', icon: 'icon-self-weixinwenjian', text: '文件传输助手' }
             ]
         },
         {
