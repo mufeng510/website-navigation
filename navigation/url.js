@@ -71,6 +71,7 @@ function myFunction() {
             items: [
                 { href: 'https://chatgpt.com/', icon: 'icon-self-chatgpticon', text: '官方ChatGPT' },
                 { href: 'https://gemini.google.com/', icon: 'icon-self-googlebard', text: 'Gemini' },
+                { href: 'https://ai.dangbei.com/chat', icon: 'icon-self-jiqiren', text: '当贝AI' },
                 { href: 'https://yuanbao.tencent.com/', icon: 'icon-self-tengxunyuanbao', text: '元宝' },
                 { href: 'https://chat.deepseek.com/', icon: 'icon-self-deepseek', text: 'DeepSeek' },
                 { href: 'https://www.doubao.com/chat/', icon: 'icon-self-doubao', text: '豆包' }
