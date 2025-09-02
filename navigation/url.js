@@ -56,6 +56,7 @@ function myFunction() {
             title: '热门常用',
             icon: 'icon-remen',
             items: [
+                { href: 'https://fnos.net/qqrr0910', icon: 'icon-self-fnos', text: '飞牛' },
                 { href: 'https://webapp.songy.info/', icon: 'icon-self-daoshi', text: '学升' },
                 { href: 'https://mubu.com/app', icon: 'icon-self-logo1', text: '幕布' },
                 { href: 'https://to-do.live.com/tasks', icon: 'icon-self-TODO_INFO', text: 'Todo' },
