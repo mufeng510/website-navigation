@@ -153,15 +153,16 @@ function myFunction() {
             ]
         }
     ];
+    urlListToElement([...fristList, ...secondList, ...thirdList], 'afterbegin');
     // 添加ipv6直链
-    var secondListCopy = JSON.parse(JSON.stringify(secondList));
-    secondListCopy.forEach((category) => {
-        category.title = category.title + ' (v6 更快,可能要多次刷新)';
-        category.items.forEach((item) => {
-            item.href = updateHref(item.href);
-        });
-    });
-    urlListToElement([...fristList, ...secondListCopy, ...secondList, ...thirdList], 'afterbegin');
+    // var secondListCopy = JSON.parse(JSON.stringify(secondList));
+    // secondListCopy.forEach((category) => {
+    //     category.title = category.title + ' (v6 更快,可能要多次刷新)';
+    //     category.items.forEach((item) => {
+    //         item.href = updateHref(item.href);
+    //     });
+    // });
+    // urlListToElement([...fristList, ...secondListCopy, ...secondList, ...thirdList], 'afterbegin');
 
     // urlListToElement(fristList, 'afterbegin');
     // urlListToElement(secondList, 'beforeend');
