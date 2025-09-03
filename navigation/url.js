@@ -153,7 +153,7 @@ function myFunction() {
             ]
         }
     ];
-    urlListToElement([...fristList, ...secondList, ...thirdList], 'afterbegin');
+    urlListToElement([...fristList, ...thirdList], 'afterbegin');
     // 添加ipv6直链
     // var secondListCopy = JSON.parse(JSON.stringify(secondList));
     // secondListCopy.forEach((category) => {
