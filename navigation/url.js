@@ -1,26 +1,3 @@
-// 判断用户网络环境是否支持IPv6
-function supportsIPv6() {
-    return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => resolve(true);
-        img.onerror = () => reject(false);
-        img.src = 'https://v6.ipv6-test.com/imgtest.png'; // 使用一个支持IPv6的图片链接
-    });
-}
-
-// 更新href值
-function updateHref(href) {
-    const domainToReplace = 'yq59.top';
-    const replacement = 'v6.yq59.top:2087';
-
-    // 判断是否包含yq59.top且不包含cf、vercel
-    if (href.includes(domainToReplace) && !href.includes('cf') && !href.includes('vercel')) {
-        return href.replace(domainToReplace, replacement);
-    }
-
-    return href;
-}
-
 /**
  * 将导航渲染到dom
  * @param {*} list
@@ -72,7 +49,8 @@ function myFunction() {
             items: [
                 { href: 'https://chatgpt.com/', icon: 'icon-self-chatgpticon', text: '官方ChatGPT' },
                 { href: 'https://gemini.google.com/', icon: 'icon-self-googlebard', text: 'Gemini' },
-                { href: 'https://chat.qwen.ai/', icon: 'icon-self-qianwen', text: '千问' },
+                { href: 'https://chat.qwen.ai/', icon: 'icon-self-QWen', text: 'QWen' },
+                { href: 'https://www.qianwen.com/', icon: 'icon-self-qianwen', text: '千问' },
                 { href: 'https://ai.dangbei.com/chat', icon: 'icon-self-jiqiren', text: '当贝AI' },
                 { href: 'https://yuanbao.tencent.com/', icon: 'icon-self-tengxunyuanbao', text: '元宝' },
                 { href: 'https://chat.deepseek.com/', icon: 'icon-self-deepseek', text: 'DeepSeek' },
@@ -107,31 +85,7 @@ function myFunction() {
                 { href: 'https://ip233.cn/', icon: 'icon-wangluo', text: 'IP查询' },
                 { href: 'https://ping.chinaz.com/', icon: 'icon-pingup', text: '站长Ping' }
             ]
-        }
-    ];
-    var secondList = [
-        {
-            title: '私有云',
-            icon: 'icon-self-siyouyun',
-            items: [
-                { href: 'https://alist.yq59.top/', icon: 'icon-self-alist', text: '文件列表' },
-                { href: 'https://photo.yq59.top/', icon: 'icon-self-xiangce', text: '相册' },
-                { href: 'https://ariang.yq59.top/', icon: 'icon-self-aria2', text: 'AriaNg' },
-                { href: 'https://image.yq59.top/', icon: 'icon-self-xiangce1', text: '图床' }
-            ]
         },
-        {
-            title: '家庭服务',
-            icon: 'icon-self-faxianye_jia_jiating',
-            items: [
-                { href: 'http://192.168.68.182:9978/', icon: 'icon-self-tv_airplay_line', text: 'TVBOX' },
-                // { href: 'https://v2ray.yq59.top/', icon: 'icon-self-V2raya_A', text: 'v2rayA' },
-                { href: 'https://ql.yq59.top/', icon: 'icon-self-dragon', text: '青龙' },
-                { href: 'https://cups.yq59.top/', icon: 'icon-self-dayinji', text: 'cups' }
-            ]
-        }
-    ];
-    var thirdList = [
         {
             title: '资源分享',
             icon: 'icon-msg',
@@ -154,33 +108,7 @@ function myFunction() {
             ]
         }
     ];
-    urlListToElement([...fristList, ...thirdList], 'afterbegin');
-    // 添加ipv6直链
-    // var secondListCopy = JSON.parse(JSON.stringify(secondList));
-    // secondListCopy.forEach((category) => {
-    //     category.title = category.title + ' (v6 更快,可能要多次刷新)';
-    //     category.items.forEach((item) => {
-    //         item.href = updateHref(item.href);
-    //     });
-    // });
-    // urlListToElement([...fristList, ...secondListCopy, ...secondList, ...thirdList], 'afterbegin');
-
-    // urlListToElement(fristList, 'afterbegin');
-    // urlListToElement(secondList, 'beforeend');
-
-    // setTimeout(() => {
-    //     supportsIPv6()
-    //         .then((res) => {
-    //             console.log('IPv6 is supported.');
-    //             urlListToElement(secondListCopy, 'beforeend');
-    //         })
-    //         .catch(() => {
-    //             console.log('IPv6 is not supported.');
-    //         })
-    //         .finally(() => {
-    //             urlListToElement(thirdList, 'beforeend');
-    //         });
-    // }, 10);
+    urlListToElement(fristList, 'afterbegin');
 }
 
 myFunction();
