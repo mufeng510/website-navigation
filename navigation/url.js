@@ -34,13 +34,20 @@ function myFunction() {
             icon: 'icon-remen',
             items: [
                 { href: 'https://fnos.net/qqrr0910', icon: 'icon-self-fnos', text: '飞牛' },
+                { href: 'https://to-do.live.com/tasks', icon: 'icon-self-TODO_INFO', text: 'Todo' },
+                { href: 'https://docs.qq.com/desktop/', icon: 'icon-self-tengxunwendang', text: '腾讯文档' },
+                { href: 'https://filehelper.weixin.qq.com/', icon: 'icon-self-weixinwenjian', text: '文件传输助手' }
+            ]
+        },
+        {
+            title: '学习',
+            icon: 'icon-self-xuexi',
+            items: [
                 { href: 'https://webapp.songy.info/', icon: 'icon-self-daoshi', text: '学升' },
                 { href: 'https://mubu.com/app', icon: 'icon-self-logo1', text: '幕布' },
-                { href: 'https://to-do.live.com/tasks', icon: 'icon-self-TODO_INFO', text: 'Todo' },
                 { href: 'https://ankiweb.net/', icon: 'icon-self-anki', text: 'Anki' },
                 { href: 'https://weread.qq.com/', icon: 'icon-self-weixindushu', text: '微信读书' },
-                { href: 'https://book.douban.com/', icon: 'icon-self-douban', text: '豆瓣读书' },
-                { href: 'https://filehelper.weixin.qq.com/', icon: 'icon-self-weixinwenjian', text: '文件传输助手' }
+                { href: 'https://book.douban.com/', icon: 'icon-self-douban', text: '豆瓣读书' }
             ]
         },
         {
@@ -49,10 +56,11 @@ function myFunction() {
             items: [
                 { href: 'https://chatgpt.com/', icon: 'icon-self-chatgpticon', text: '官方ChatGPT' },
                 { href: 'https://gemini.google.com/', icon: 'icon-self-googlebard', text: 'Gemini' },
+                { href: 'https://grok.com/', icon: 'icon-self-grok', text: 'Grok' },
                 { href: 'https://chat.qwen.ai/', icon: 'icon-self-QWen', text: 'QWen' },
                 { href: 'https://www.qianwen.com/', icon: 'icon-self-qianwen', text: '千问' },
                 { href: 'https://ai.dangbei.com/chat', icon: 'icon-self-jiqiren', text: '当贝AI' },
-                { href: 'https://yuanbao.tencent.com/', icon: 'icon-self-tengxunyuanbao', text: '元宝' },
+                // { href: 'https://yuanbao.tencent.com/', icon: 'icon-self-tengxunyuanbao', text: '元宝' },
                 { href: 'https://chat.deepseek.com/', icon: 'icon-self-deepseek', text: 'DeepSeek' },
                 { href: 'https://www.doubao.com/chat/', icon: 'icon-self-doubao', text: '豆包' }
                 // { href: 'https://ai.vercel.yq59.top/', icon: 'icon-self-ic-chatgpt', text: 'ChatGPT Next' },
