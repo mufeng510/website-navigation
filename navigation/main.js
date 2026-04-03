@@ -1,14 +1,60 @@
-const SEARCH_ENGINE_KEY = 'search_engine';
-const SEARCH_BLANK_KEY = 'search_blank';
+import { initializeSuggestions } from './sou.js';
+import { initializeNavigation } from './url.js';
+import { SEARCH_ENGINES, SEARCH_STORAGE_KEYS } from './search-config.js';
+
+function createSearchLabel(labelParts) {
+    const label = document.createElement('label');
+
+    labelParts.forEach(function (part) {
+        const span = document.createElement('span');
+        span.textContent = part.text;
+        span.style.color = part.color;
+        label.appendChild(span);
+    });
+
+    return label;
+}
+
+function renderSearchEngines(container) {
+    const fragment = document.createDocumentFragment();
+
+    SEARCH_ENGINES.forEach(function (engine, index) {
+        const item = document.createElement('li');
+        const input = document.createElement('input');
+        const label = createSearchLabel(engine.labelParts);
+
+        input.hidden = true;
+        input.type = 'radio';
+        input.name = 'type';
+        input.id = engine.id;
+        input.value = engine.action;
+        input.dataset.placeholder = engine.placeholder;
+        input.checked = index === 0;
+        label.htmlFor = engine.id;
+
+        item.appendChild(input);
+        item.appendChild(label);
+        fragment.appendChild(item);
+    });
+
+    container.replaceChildren(fragment);
+}
 
 function initializeSearchForm() {
     const searchForm = document.getElementById('super-search-fm');
     const searchInput = document.getElementById('search-text');
     const blankToggle = document.getElementById('set-search-blank');
-    const engineInputs = Array.from(document.querySelectorAll('input[name="type"]'));
-    const searchGroups = document.querySelectorAll('.search-group');
+    const searchGroup = document.querySelector('.search-group');
+    const searchTypeList = document.getElementById('searchTypeList');
 
-    if (!searchForm || !searchInput || !blankToggle || engineInputs.length === 0) {
+    if (!searchForm || !searchInput || !blankToggle || !searchGroup || !searchTypeList) {
+        return;
+    }
+
+    renderSearchEngines(searchTypeList);
+
+    const engineInputs = Array.from(document.querySelectorAll('input[name="type"]'));
+    if (engineInputs.length === 0) {
         return;
     }
 
@@ -16,15 +62,8 @@ function initializeSearchForm() {
         searchInput.placeholder = input.dataset.placeholder || '站内搜索';
     };
 
-    const updateActiveGroup = function (input) {
-        searchGroups.forEach(function (group) {
-            group.classList.remove('s-current');
-        });
-
-        const parentGroup = input.closest('.search-group');
-        if (parentGroup) {
-            parentGroup.classList.add('s-current');
-        }
+    const updateActiveGroup = function () {
+        searchGroup.classList.add('s-current');
     };
 
     const updateFormAction = function (input) {
@@ -50,17 +89,17 @@ function initializeSearchForm() {
         input.checked = true;
         updatePlaceholder(input);
         updateFormAction(input);
-        updateActiveGroup(input);
-        localStorage.setItem(SEARCH_ENGINE_KEY, input.value);
+        updateActiveGroup();
+        localStorage.setItem(SEARCH_STORAGE_KEYS.engine, input.value);
     };
 
-    const storedEngine = localStorage.getItem(SEARCH_ENGINE_KEY);
+    const storedEngine = localStorage.getItem(SEARCH_STORAGE_KEYS.engine);
     const selectedEngine =
         engineInputs.find(function (input) {
             return input.value === storedEngine;
         }) || engineInputs[0];
 
-    const openInNewTab = localStorage.getItem(SEARCH_BLANK_KEY) !== '0';
+    const openInNewTab = localStorage.getItem(SEARCH_STORAGE_KEYS.blank) !== '0';
     blankToggle.checked = openInNewTab;
     updateTarget(openInNewTab);
     applySelectedEngine(selectedEngine);
@@ -74,7 +113,7 @@ function initializeSearchForm() {
 
     blankToggle.addEventListener('change', function (event) {
         const enabled = event.target.checked;
-        localStorage.setItem(SEARCH_BLANK_KEY, enabled ? '1' : '0');
+        localStorage.setItem(SEARCH_STORAGE_KEYS.blank, enabled ? '1' : '0');
         updateTarget(enabled);
     });
 
@@ -103,4 +142,8 @@ function initializeSearchForm() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', initializeSearchForm);
+document.addEventListener('DOMContentLoaded', function () {
+    initializeSearchForm();
+    initializeSuggestions();
+    initializeNavigation();
+});

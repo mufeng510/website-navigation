@@ -46,7 +46,7 @@ function fetchSuggestions(keyword) {
     });
 }
 
-function initializeSuggestions() {
+export function initializeSuggestions() {
     const searchForm = document.getElementById('super-search-fm');
     const searchInput = document.getElementById('search-text');
     const suggestionList = document.getElementById('word');
@@ -130,5 +130,3 @@ function initializeSuggestions() {
 
     searchForm.addEventListener('submit', hideSuggestions);
 }
-
-document.addEventListener('DOMContentLoaded', initializeSuggestions);
