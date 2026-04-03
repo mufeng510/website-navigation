@@ -1,58 +1,134 @@
-//关键词sug
-$(function () {
-    //当键盘键被松开时发送Ajax获取数据
-    $('#search-text').keyup(function () {
-        var keywords = $(this).val();
-        if (keywords == '') {
-            $('#word').hide();
+const SUGGESTION_ENDPOINT = 'https://suggestion.baidu.com/su';
+const SUGGESTION_CALLBACK_PREFIX = '__mufengSuggestion__';
+const SUGGESTION_DEBOUNCE_MS = 180;
+
+function debounce(fn, delay) {
+    let timerId = 0;
+
+    return function () {
+        const context = this;
+        const args = arguments;
+
+        window.clearTimeout(timerId);
+        timerId = window.setTimeout(function () {
+            fn.apply(context, args);
+        }, delay);
+    };
+}
+
+function fetchSuggestions(keyword) {
+    return new Promise(function (resolve, reject) {
+        const callbackName = SUGGESTION_CALLBACK_PREFIX + Date.now();
+        const script = document.createElement('script');
+        const url = new URL(SUGGESTION_ENDPOINT);
+
+        url.searchParams.set('wd', keyword);
+        url.searchParams.set('cb', callbackName);
+
+        const cleanup = function () {
+            delete window[callbackName];
+            script.remove();
+        };
+
+        window[callbackName] = function (payload) {
+            cleanup();
+            resolve(Array.isArray(payload.s) ? payload.s : []);
+        };
+
+        script.src = url.toString();
+        script.async = true;
+        script.onerror = function () {
+            cleanup();
+            reject(new Error('Unable to load suggestions'));
+        };
+
+        document.body.appendChild(script);
+    });
+}
+
+function initializeSuggestions() {
+    const searchForm = document.getElementById('super-search-fm');
+    const searchInput = document.getElementById('search-text');
+    const suggestionList = document.getElementById('word');
+    const shell = document.querySelector('.page-shell');
+
+    if (!searchForm || !searchInput || !suggestionList || !shell) {
+        return;
+    }
+
+    let activeRequestId = 0;
+
+    const hideSuggestions = function () {
+        suggestionList.innerHTML = '';
+        suggestionList.style.display = 'none';
+    };
+
+    const showSuggestions = function (items) {
+        suggestionList.innerHTML = '';
+
+        if (items.length === 0) {
+            hideSuggestions();
             return;
         }
-        $.ajax({
-            url: 'https://suggestion.baidu.com/su?wd=' + keywords,
-            dataType: 'jsonp',
-            jsonp: 'cb', //回调函数的参数名(键值)key
-            // jsonpCallback: 'fun', //回调函数名(值) value
-            beforeSend: function () {
-                // $('#word').append('<li>正在加载。。。</li>');
-            },
-            success: function (data) {
-                $('#word').empty().show();
-                if (data.s == '') {
-                    //$('#word').append('<div class="error">Not find  "' + keywords + '"</div>');
-                    $('#word').empty();
-                    $('#word').hide();
-                }
-                $.each(data.s, function () {
-                    $('#word').append('<li>' + this + '</li>');
-                });
-            },
-            error: function () {
-                $('#word').empty().show();
-                //$('#word').append('<div class="click_work">Fail "' + keywords + '"</div>');
-                $('#word').hide();
-            }
+
+        const fragment = document.createDocumentFragment();
+        items.forEach(function (item) {
+            const li = document.createElement('li');
+            li.textContent = item;
+            fragment.appendChild(li);
         });
-    });
-    //点击搜索数据复制给搜索框
-    $(document).on('click', '#word li', function () {
-        var word = $(this).text();
-        $('#search-text').val(word);
-        $('#word').empty();
-        $('#word').hide();
-        //$("form").submit();
-        $('.submit').trigger('click'); //触发搜索事件
-    });
-    $(document).on('click', '.container,.banner-video,nav', function () {
-        $('#word').empty();
-        $('#word').hide();
+
+        suggestionList.appendChild(fragment);
+        suggestionList.style.display = 'block';
+    };
+
+    const requestSuggestions = debounce(function () {
+        const keyword = searchInput.value.trim();
+
+        if (!keyword) {
+            hideSuggestions();
+            return;
+        }
+
+        const requestId = activeRequestId + 1;
+        activeRequestId = requestId;
+
+        fetchSuggestions(keyword)
+            .then(function (items) {
+                if (requestId !== activeRequestId) {
+                    return;
+                }
+
+                showSuggestions(items);
+            })
+            .catch(function () {
+                if (requestId === activeRequestId) {
+                    hideSuggestions();
+                }
+            });
+    }, SUGGESTION_DEBOUNCE_MS);
+
+    searchInput.addEventListener('input', requestSuggestions);
+
+    suggestionList.addEventListener('click', function (event) {
+        const item = event.target.closest('li');
+
+        if (!item) {
+            return;
+        }
+
+        searchInput.value = item.textContent || '';
+        hideSuggestions();
+        searchForm.requestSubmit();
     });
 
-    // 搜索后清空输入框的值
-    var form = document.getElementById('super-search-fm');
-    form.addEventListener('submit', function (event) {
-        var input = document.getElementById('search-text');
-        input.value = '';
-        $('#word').empty();
-        $('#word').hide();
+    document.addEventListener('click', function (event) {
+        if (!shell.contains(event.target)) {
+            hideSuggestions();
+        }
     });
-});
+
+    searchForm.addEventListener('submit', hideSuggestions);
+}
+
+document.addEventListener('DOMContentLoaded', initializeSuggestions);
