@@ -1,8 +1,10 @@
+// Local storage keys for search preferences.
 export const SEARCH_STORAGE_KEYS = {
     engine: 'search_engine',
     blank: 'search_blank'
 };
 
+// Search engine definitions drive the rendered radio list and form behavior.
 export const SEARCH_ENGINES = [
     {
         id: 'type-bing',

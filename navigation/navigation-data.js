@@ -1,3 +1,5 @@
+// Central navigation data source. The rendering layer reads this structure
+// directly, so new sections and links should usually be added here first.
 export const NAVIGATION_GROUPS = [
     {
         title: '热门常用',

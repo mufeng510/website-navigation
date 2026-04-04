@@ -41,6 +41,8 @@ function createLinkItem(item) {
 }
 
 function renderNavigation(groups, container) {
+    // Build the navigation list from data only. Group titles and links share
+    // the same container to match the existing flat list layout in the page.
     const fragment = document.createDocumentFragment();
 
     groups.forEach(function (group) {

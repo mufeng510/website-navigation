@@ -16,6 +16,8 @@ function createSearchLabel(labelParts) {
 }
 
 function renderSearchEngines(container) {
+    // Render search engine options from configuration so engines can be
+    // added or reordered without changing the form logic.
     const fragment = document.createDocumentFragment();
 
     SEARCH_ENGINES.forEach(function (engine, index) {
@@ -86,6 +88,8 @@ function initializeSearchForm() {
             return;
         }
 
+        // Persist the selected engine as its action URL. That keeps storage
+        // independent from the radio order rendered on the page.
         input.checked = true;
         updatePlaceholder(input);
         updateFormAction(input);
@@ -131,6 +135,8 @@ function initializeSearchForm() {
         updateFormAction(activeEngine);
         searchInput.value = keyword;
 
+        // The configured actions already include the query key, so submit by
+        // building the destination URL directly instead of relying on form serialization.
         const searchUrl = searchForm.action + encodeURIComponent(keyword);
 
         if (blankToggle.checked) {

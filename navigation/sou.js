@@ -25,6 +25,8 @@ function fetchSuggestions(keyword) {
         url.searchParams.set('wd', keyword);
         url.searchParams.set('cb', callbackName);
 
+        // Baidu suggestions are exposed through JSONP, so each request creates
+        // a temporary global callback and script tag that must be cleaned up.
         const cleanup = function () {
             delete window[callbackName];
             script.remove();
@@ -95,6 +97,8 @@ export function initializeSuggestions() {
 
         fetchSuggestions(keyword)
             .then(function (items) {
+                // Ignore stale responses when a slower request returns after
+                // the user has already typed a newer keyword.
                 if (requestId !== activeRequestId) {
                     return;
                 }
