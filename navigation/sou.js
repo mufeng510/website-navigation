@@ -132,5 +132,8 @@ export function initializeSuggestions() {
         }
     });
 
-    searchForm.addEventListener('submit', hideSuggestions);
+    searchForm.addEventListener('submit', function () {
+        hideSuggestions();
+        searchInput.value = '';
+    });
 }

@@ -17,6 +17,7 @@ export const NAVIGATION_GROUPS = [
         icon: 'icon-self-xuexi',
         items: [
             { href: 'https://webapp.songy.info/', icon: 'icon-self-daoshi', text: '学升' },
+            { href: 'https://app.enjoy.bot/home', icon: 'icon-self-svg', text: 'Enjoy' },
             { href: 'https://mubu.com/app', icon: 'icon-self-logo1', text: '幕布' },
             { href: 'https://ankiweb.net/', icon: 'icon-self-anki', text: 'Anki' },
             { href: 'https://weread.qq.com/', icon: 'icon-self-weixindushu', text: '微信读书' },
