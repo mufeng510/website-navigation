@@ -33,7 +33,7 @@ export const SEARCH_ENGINES = [
     },
     {
         id: 'type-book',
-        action: 'https://zh.annas-archive.org/search?q=',
+        action: 'https://zh.annas-archive.gl/search?q=',
         placeholder: '书籍搜索',
         labelParts: [{ text: '书籍', color: '#000000' }]
     }
