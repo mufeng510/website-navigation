@@ -2,6 +2,19 @@ const SUGGESTION_ENDPOINT = 'https://suggestion.baidu.com/su';
 const SUGGESTION_CALLBACK_PREFIX = '__mufengSuggestion__';
 const SUGGESTION_DEBOUNCE_MS = 180;
 
+function getSuggestionElements() {
+    const searchForm = document.getElementById('super-search-fm');
+    const searchInput = document.getElementById('search-text');
+    const suggestionList = document.getElementById('word');
+    const shell = document.querySelector('.page-shell');
+
+    if (!searchForm || !searchInput || !suggestionList || !shell) {
+        return null;
+    }
+
+    return { searchForm, searchInput, suggestionList, shell };
+}
+
 function debounce(fn, delay) {
     let timerId = 0;
 
@@ -49,25 +62,21 @@ function fetchSuggestions(keyword) {
 }
 
 export function initializeSuggestions() {
-    const searchForm = document.getElementById('super-search-fm');
-    const searchInput = document.getElementById('search-text');
-    const suggestionList = document.getElementById('word');
-    const shell = document.querySelector('.page-shell');
+    const elements = getSuggestionElements();
 
-    if (!searchForm || !searchInput || !suggestionList || !shell) {
+    if (!elements) {
         return;
     }
 
+    const { searchForm, searchInput, suggestionList, shell } = elements;
     let activeRequestId = 0;
 
     const hideSuggestions = function () {
-        suggestionList.innerHTML = '';
+        suggestionList.replaceChildren();
         suggestionList.style.display = 'none';
     };
 
     const showSuggestions = function (items) {
-        suggestionList.innerHTML = '';
-
         if (items.length === 0) {
             hideSuggestions();
             return;
@@ -80,7 +89,7 @@ export function initializeSuggestions() {
             fragment.appendChild(li);
         });
 
-        suggestionList.appendChild(fragment);
+        suggestionList.replaceChildren(fragment);
         suggestionList.style.display = 'block';
     };
 

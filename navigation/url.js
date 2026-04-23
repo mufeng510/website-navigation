@@ -16,8 +16,7 @@ function createTitleItem(group) {
     const titleItem = document.createElement('li');
 
     titleItem.className = 'title';
-    titleItem.appendChild(createIcon(group.icon));
-    titleItem.append(' ' + group.title);
+    titleItem.append(createIcon(group.icon), ' ' + group.title);
 
     return titleItem;
 }
@@ -32,17 +31,14 @@ function createLinkItem(item) {
     link.target = '_blank';
     link.rel = 'nofollow noopener noreferrer';
 
-    link.appendChild(createIcon(item.icon));
     text.textContent = item.text;
-    link.appendChild(text);
+    link.append(createIcon(item.icon), text);
     listItem.appendChild(link);
 
     return listItem;
 }
 
-function renderNavigation(groups, container) {
-    // Build the navigation list from data only. Group titles and links share
-    // the same container to match the existing flat list layout in the page.
+function createNavigationFragment(groups) {
     const fragment = document.createDocumentFragment();
 
     groups.forEach(function (group) {
@@ -52,7 +48,7 @@ function renderNavigation(groups, container) {
         });
     });
 
-    container.replaceChildren(fragment);
+    return fragment;
 }
 
 export function initializeNavigation() {
@@ -62,5 +58,5 @@ export function initializeNavigation() {
         return;
     }
 
-    renderNavigation(NAVIGATION_GROUPS, container);
+    container.replaceChildren(createNavigationFragment(NAVIGATION_GROUPS));
 }
