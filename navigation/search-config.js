@@ -7,12 +7,6 @@ export const SEARCH_STORAGE_KEYS = {
 // Search engine definitions drive the rendered radio list and form behavior.
 export const SEARCH_ENGINES = [
     {
-        id: 'type-bing',
-        action: 'https://cn.bing.com/search?q=',
-        placeholder: 'Bing搜索',
-        labelParts: [{ text: 'Bing', color: '#048787' }]
-    },
-    {
         id: 'type-google',
         action: 'https://www.google.com/search?q=',
         placeholder: '谷歌搜索',
@@ -24,6 +18,12 @@ export const SEARCH_ENGINES = [
             { text: 'l', color: '#2CAB4E' },
             { text: 'e', color: '#F54231' }
         ]
+    },
+    {
+        id: 'type-bing',
+        action: 'https://cn.bing.com/search?q=',
+        placeholder: 'Bing搜索',
+        labelParts: [{ text: 'Bing', color: '#048787' }]
     },
     {
         id: 'type-sougou',
