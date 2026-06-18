@@ -6,7 +6,8 @@ export const NAVIGATION_GROUPS = [
         icon: 'icon-remen',
         items: [
             { href: 'https://fnos.net/qqrr0910', icon: 'icon-self-fnos', text: '飞牛' },
-            { href: 'https://y.qq.com/', icon: 'icon-self-QQyinle', text: 'QQ音乐' },
+            { href: 'https://www.icloud.com.cn/', icon: 'icon-self-iCloudyunpan', text: 'iCloud' },
+            // { href: 'https://y.qq.com/', icon: 'icon-self-QQyinle', text: 'QQ音乐' },
             // { href: 'https://to-do.live.com/tasks', icon: 'icon-self-TODO_INFO', text: 'Todo' },
             // { href: 'https://www.siriser.com/siriser/workbench', icon: 'icon-self-AIxunlian', text: '晓天' },
             { href: 'https://docs.qq.com/desktop/', icon: 'icon-self-tengxunwendang', text: '腾讯文档' },
