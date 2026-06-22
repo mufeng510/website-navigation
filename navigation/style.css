@@ -46,6 +46,14 @@ svg.icon {
     fill: currentColor;
     overflow: hidden;
 }
+
+img.icon {
+    width: 14px;
+    height: 14px;
+    margin: 0 5px 0 8px;
+    vertical-align: -0.15em;
+    object-fit: contain;
+}
 /*menu*/
 .navbar-light .navbar-nav .nav-link {
     color: #fff;
@@ -343,6 +351,19 @@ svg.icon {
     margin: 0 auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
+
+.mylist li.col-3 img.icon {
+    display: block;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin: 0 auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
 .mylist li.col-3:hover {
     background: var(--hover-bg);
     transform: translateY(-4px);
@@ -370,6 +391,13 @@ svg.icon {
 }
 
 .mylist li.col-3:hover svg {
+    background: var(--icon-hover-bg);
+    border-color: rgba(120, 156, 255, 0.22);
+    box-shadow: 0 10px 18px rgba(104, 141, 255, 0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.mylist li.col-3:hover img.icon {
     background: var(--icon-hover-bg);
     border-color: rgba(120, 156, 255, 0.22);
     box-shadow: 0 10px 18px rgba(104, 141, 255, 0.18);
@@ -438,6 +466,13 @@ svg.icon {
         margin: 5px 0 5px;
     }
     .mylist li.col-3 svg {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .mylist li.col-3 img.icon {
         width: 30px;
         height: 30px;
         padding: 5px;

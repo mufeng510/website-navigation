@@ -1,12 +1,22 @@
 import { NAVIGATION_GROUPS } from './navigation-data.js';
 
-function createIcon(iconName) {
+function createIcon(iconValue) {
+    // Support both SVG sprite references and image URLs
+    if (iconValue.startsWith('http://') || iconValue.startsWith('https://') || iconValue.startsWith('/')) {
+        const img = document.createElement('img');
+        img.setAttribute('class', 'icon');
+        img.setAttribute('src', iconValue);
+        img.setAttribute('alt', '');
+        img.setAttribute('aria-hidden', 'true');
+        return img;
+    }
+
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
 
     icon.setAttribute('class', 'icon');
     icon.setAttribute('aria-hidden', 'true');
-    use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '#' + iconName);
+    use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '#' + iconValue);
     icon.appendChild(use);
 
     return icon;

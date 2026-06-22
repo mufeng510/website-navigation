@@ -1,5 +1,9 @@
 // Central navigation data source. The rendering layer reads this structure
 // directly, so new sections and links should usually be added here first.
+//
+// Icon format supports:
+// - SVG sprite reference: 'icon-name' (uses internal SVG sprite)
+// - Image URL: 'https://example.com/icon.png' or '/path/to/icon.png'
 export const NAVIGATION_GROUPS = [
     {
         title: '热门常用',
@@ -19,6 +23,7 @@ export const NAVIGATION_GROUPS = [
         icon: 'icon-self-xuexi',
         items: [
             { href: 'https://webapp.songy.info/', icon: 'icon-self-daoshi', text: '学升' },
+            { href: 'https://lixiaolai.com/books', icon: 'https://lixiaolai.com/icon.svg', text: '笑来' },
             { href: 'https://app.enjoy.bot/home', icon: 'icon-self-svg', text: 'Enjoy' },
             { href: 'https://mubu.com/app', icon: 'icon-self-logo1', text: '幕布' },
             { href: 'https://ankiweb.net/', icon: 'icon-self-anki', text: 'Anki' },
@@ -32,7 +37,8 @@ export const NAVIGATION_GROUPS = [
         icon: 'icon-self-rengongzhineng',
         items: [
             { href: 'https://chatgpt.com/', icon: 'icon-self-chatgpticon', text: '官方ChatGPT' },
-            { href: 'https://gemini.google.com/', icon: 'icon-self-googlebard', text: 'Gemini' },
+            { href: 'https://gemini.google.com/', icon: 'https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg', text: 'Gemini' },
+            // { href: 'https://gemini.google.com/', icon: 'icon-self-googlebard', text: 'Gemini' },
             { href: 'https://grok.com/', icon: 'icon-self-grok', text: 'Grok' },
             { href: 'https://chat.qwen.ai/', icon: 'icon-self-QWen', text: 'QWen' },
             { href: 'https://www.qianwen.com/', icon: 'icon-self-qianwen', text: '千问' },
