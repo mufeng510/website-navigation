@@ -52,6 +52,7 @@ export const NAVIGATION_GROUPS = [
         icon: 'icon-kongzhitai',
         items: [
             { href: 'https://github.com/', icon: 'icon-github', text: 'Github' },
+            { href: 'https://hub.docker.com/', icon: 'icon-self-docker', text: 'Docker' },
             { href: 'https://dash.cloudflare.com/', icon: 'icon-cloudflare', text: 'C. flare' },
             { href: 'https://www.iconfont.cn/', icon: 'icon-iconfont', text: '阿里图标' },
             { href: 'https://app.apifox.com/main', icon: 'icon-self-apifox', text: 'Apifox' }
