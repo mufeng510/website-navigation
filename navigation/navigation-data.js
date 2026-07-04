@@ -19,15 +19,23 @@ export const NAVIGATION_GROUPS = [
         ]
     },
     {
+        title: '工作',
+        icon: 'icon-self-gongzuo',
+        items: [
+            { href: 'https://www.xiaohongshu.com/', icon: 'icon-self-xiaohongshu', text: '小红书' },
+            { href: 'https://xhs.nas.yq59.top:31000/', icon: 'icon-self-xhs', text: 'XHS运营' }
+        ]
+    },
+    {
         title: '学习',
         icon: 'icon-self-xuexi',
         items: [
             { href: 'https://webapp.songy.info/', icon: 'icon-self-daoshi', text: '学升' },
             { href: 'https://lixiaolai.com/books', icon: 'https://lixiaolai.com/icon.svg', text: '笑来' },
             { href: 'https://app.enjoy.bot/home', icon: 'icon-self-svg', text: 'Enjoy' },
-            { href: 'https://mubu.com/app', icon: 'icon-self-logo1', text: '幕布' },
-            { href: 'https://ankiweb.net/', icon: 'icon-self-anki', text: 'Anki' },
-            { href: 'http://192.168.31.64:6001/', icon: 'icon-self-tushuguan-fuwuye', text: 'TaleBook' },
+            // { href: 'https://mubu.com/app', icon: 'icon-self-logo1', text: '幕布' },
+            // { href: 'https://ankiweb.net/', icon: 'icon-self-anki', text: 'Anki' },
+            { href: 'https://book.nas.yq59.top:31000/', icon: 'icon-self-tushuguan-fuwuye', text: '馆藏图书' },
             { href: 'https://weread.qq.com/', icon: 'icon-self-weixindushu', text: '微信读书' },
             { href: 'https://book.douban.com/', icon: 'icon-self-douban', text: '豆瓣读书' }
         ]
