@@ -24,7 +24,7 @@ export const NAVIGATION_GROUPS = [
         items: [
             { href: 'https://www.xiaohongshu.com/', icon: 'icon-self-xiaohongshu', text: '小红书' },
             { href: 'https://xhs.nas.yq59.top:31000/', icon: 'icon-self-xhs', text: 'XHS运营' },
-            { href: 'https://claw.nas.yq59.top:31000/', icon: 'icon-self-a-favicon3', text: '龙虾' }
+            { href: 'https://claw.nas.yq59.top:31000/', icon: 'icon-self-claw', text: '龙虾' }
         ]
     },
     {
@@ -100,6 +100,14 @@ export const NAVIGATION_GROUPS = [
             { href: 'https://mail.sina.com.cn/', icon: 'icon-xinlangwang', text: '新浪邮箱' },
             { href: 'https://mail.qq.com/', icon: 'icon-QQ', text: 'QQ邮箱' },
             { href: 'https://qiye.aliyun.com/', icon: 'icon-yunyouxiang', text: '阿里邮箱' }
+        ]
+    },
+    {
+        title: '其他',
+        icon: 'icon-self-qitachajianqu',
+        items: [
+            { href: 'https://clash.nas.yq59.top:31000', icon: 'icon-self-weibiaoti-_huabanfuben-copy-copy-copy-copy', text: 'Clash' },
+            { href: 'https://dst.nas.yq59.top:31000', icon: 'icon-self-dst', text: '饥荒' }
         ]
     }
 ];
