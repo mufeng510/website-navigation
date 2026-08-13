@@ -24,6 +24,7 @@ export const NAVIGATION_GROUPS = [
         items: [
             { href: 'https://www.xiaohongshu.com/', icon: 'icon-self-xiaohongshu', text: '小红书' },
             { href: 'https://xhs.nas.yq59.top:31000/', icon: 'icon-self-xhs', text: 'XHS运营' },
+            { href: 'https://code.nas.yq59.top:31000/', icon: 'icon-self-vscode', text: 'Code' },
             { href: 'https://claw.nas.yq59.top:31000/', icon: 'icon-self-claw', text: '龙虾' }
         ]
     },
