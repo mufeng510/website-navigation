@@ -24,6 +24,8 @@ export const NAVIGATION_GROUPS = [
         items: [
             { href: 'https://www.xiaohongshu.com/', icon: 'icon-self-xiaohongshu', text: '小红书' },
             { href: 'https://xhs.nas.yq59.top:31000/', icon: 'icon-self-xhs', text: 'XHS运营' },
+            { href: 'https://xhs-goods-copy.nas.yq59.top:31000', icon: 'icon-self-RectangleCopy33', text: 'goods-copy' },
+            { href: 'https://xhs-product-selection.nas.yq59.top:31000', icon: 'icon-self-xuanpinzhongxin', text: 'XHS选品' },
             // { href: 'https://code.nas.yq59.top:31000/', icon: 'icon-self-vscode', text: 'Code' },
             { href: 'https://chamber.nas.yq59.top:31000/', icon: 'icon-self-openchamber-logo-light', text: 'Chamber' },
             { href: 'https://claw.nas.yq59.top:31000/', icon: 'icon-self-claw', text: '龙虾' }
@@ -110,6 +112,7 @@ export const NAVIGATION_GROUPS = [
         items: [
             { href: 'https://lucky.nas.yq59.top:31000', icon: 'icon-self-Lucky', text: 'Lucky' },
             { href: 'https://clash.nas.yq59.top:31000', icon: 'icon-self-clash', text: 'Clash' },
+            { href: 'https://bookmarks.nas.yq59.top:31000', icon: 'icon-self-bookmarks', text: '私人书签' },
             { href: 'https://dst.nas.yq59.top:31000', icon: 'icon-self-dst', text: '饥荒' }
         ]
     }
