@@ -26,8 +26,6 @@ body {
     color: var(--page-text);
     overflow-x: hidden;
     background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
 }
 
 a {
@@ -505,17 +503,4 @@ img.icon {
 
 ::-webkit-scrollbar-corner {
     background: #ddd;
-}
-
-/* 渐变背景动画 */
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
