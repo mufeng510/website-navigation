@@ -112,7 +112,7 @@ export const NAVIGATION_GROUPS = [
         icon: 'icon-self-qitachajianqu',
         items: [
             { href: 'https://lucky.nas.yq59.top:31000', icon: 'icon-self-Lucky', text: 'Lucky' },
-            { href: 'https://clash.nas.yq59.top:31000', icon: 'icon-self-clash', text: 'Clash' },
+            { href: 'http://192.168.31.13:31004/', icon: 'icon-self-clash', text: 'Clash' },
             { href: 'https://bookmarks.nas.yq59.top:31000', icon: 'icon-self-bookmarks', text: '私人书签' },
             { href: 'https://dst.nas.yq59.top:31000', icon: 'icon-self-dst', text: '饥荒' }
         ]
