@@ -11,6 +11,7 @@ export const NAVIGATION_GROUPS = [
         items: [
             { href: 'https://fnos.net/qqrr0910', icon: 'icon-self-fnos', text: '飞牛' },
             { href: 'https://www.icloud.com.cn/', icon: 'icon-self-iCloudyunpan', text: 'iCloud' },
+            { href: 'https://web-node.nas.yq59.top:31000/login', icon: 'icon-self-bijiben', text: 'Note' },
             // { href: 'https://y.qq.com/', icon: 'icon-self-QQyinle', text: 'QQ音乐' },
             // { href: 'https://to-do.live.com/tasks', icon: 'icon-self-TODO_INFO', text: 'Todo' },
             // { href: 'https://www.siriser.com/siriser/workbench', icon: 'icon-self-AIxunlian', text: '晓天' },
@@ -52,11 +53,9 @@ export const NAVIGATION_GROUPS = [
         items: [
             { href: 'https://chatgpt.com/', icon: 'icon-self-chatgpticon', text: '官方ChatGPT' },
             { href: 'https://gemini.google.com/', icon: 'https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg', text: 'Gemini' },
-            // { href: 'https://gemini.google.com/', icon: 'icon-self-googlebard', text: 'Gemini' },
             { href: 'https://grok.com/', icon: 'icon-self-grok', text: 'Grok' },
             { href: 'https://chat.qwen.ai/', icon: 'icon-self-QWen', text: 'QWen' },
             { href: 'https://www.qianwen.com/', icon: 'icon-self-qianwen', text: '千问' },
-            // { href: 'https://ai.dangbei.com/chat', icon: 'icon-self-jiqiren', text: '当贝AI' },
             { href: 'https://chat.deepseek.com/', icon: 'icon-self-deepseek', text: 'DeepSeek' },
             { href: 'https://www.doubao.com/chat/', icon: 'icon-self-doubao', text: '豆包' }
         ]
@@ -68,8 +67,7 @@ export const NAVIGATION_GROUPS = [
             { href: 'https://github.com/', icon: 'icon-github', text: 'Github' },
             { href: 'https://hub.docker.com/', icon: 'icon-self-docker', text: 'Docker' },
             { href: 'https://dash.cloudflare.com/', icon: 'icon-cloudflare', text: 'C. flare' },
-            { href: 'https://www.iconfont.cn/', icon: 'icon-iconfont', text: '阿里图标' },
-            { href: 'https://app.apifox.com/main', icon: 'icon-self-apifox', text: 'Apifox' }
+            { href: 'https://www.iconfont.cn/', icon: 'icon-iconfont', text: '阿里图标' }
         ]
     },
     {
@@ -89,7 +87,6 @@ export const NAVIGATION_GROUPS = [
         title: '社区论坛',
         icon: 'icon-msg',
         items: [
-            // { href: 'https://book.daohangxie.com/', icon: 'icon-self-a-24h', text: '24h搜书' },
             { href: 'https://linux.do/', icon: 'icon-self-linux-do', text: 'LINUX DO' },
             { href: 'https://www.52pojie.cn/', icon: 'icon-theater-masks', text: '吾爱破解' },
             { href: 'https://www.v2ex.com/', icon: 'icon-v2ex', text: 'V2EX' }
