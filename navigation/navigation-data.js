@@ -30,6 +30,7 @@ export const NAVIGATION_GROUPS = [
             { href: 'https://xhs-product-selection.nas.yq59.top:31000', icon: 'icon-self-xuanpinzhongxin', text: 'XHS选品' },
             // { href: 'https://code.nas.yq59.top:31000/', icon: 'icon-self-vscode', text: 'Code' },
             { href: 'https://chamber.nas.yq59.top:31000/', icon: 'icon-self-openchamber-logo-light', text: 'Chamber' },
+            { href: 'https://win-chamber.nas.yq59.top:31000/', icon: 'icon-self-openchamber-logo-light', text: 'WChamber' },
             { href: 'https://claw.nas.yq59.top:31000/', icon: 'icon-self-claw', text: '龙虾' }
         ]
     },
