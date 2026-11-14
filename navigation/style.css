@@ -88,6 +88,27 @@ img.icon {
     background: rgba(0, 0, 0, 0.05);
 }
 
+.lan-toggle {
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.lan-toggle:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+
+.lan-toggle:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.9);
+    outline-offset: 1px;
+}
+
 .page-shell {
     margin-top: 60px !important;
     position: relative;

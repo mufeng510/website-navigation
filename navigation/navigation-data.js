@@ -10,13 +10,14 @@ export const NAVIGATION_GROUPS = [
         icon: 'icon-remen',
         items: [
             { href: 'https://fnos.net/qqrr0910', icon: 'icon-self-fnos', text: '飞牛' },
+            { href: 'https://e450.nas.yq59.top:31000', icon: 'icon-self-a-daimakaifadiannao', text: 'E450' },
+            { href: 'https://web-node.nas.yq59.top:31000', icon: 'icon-self-bijiben', text: 'Note' },
+            { href: 'https://bookmarks.nas.yq59.top:31000', icon: 'icon-self-bookmarks', text: '私人书签' },
             { href: 'https://www.icloud.com.cn/', icon: 'icon-self-iCloudyunpan', text: 'iCloud' },
-            { href: 'https://web-node.nas.yq59.top:31000/login', icon: 'icon-self-bijiben', text: 'Note' },
             // { href: 'https://y.qq.com/', icon: 'icon-self-QQyinle', text: 'QQ音乐' },
             // { href: 'https://to-do.live.com/tasks', icon: 'icon-self-TODO_INFO', text: 'Todo' },
             // { href: 'https://www.siriser.com/siriser/workbench', icon: 'icon-self-AIxunlian', text: '晓天' },
             { href: 'https://docs.qq.com/desktop/', icon: 'icon-self-tengxunwendang', text: '腾讯文档' },
-            { href: 'https://web.localsend.org/zh-CN', icon: 'icon-self-land', text: 'LocalSendvv' },
             { href: 'https://filehelper.weixin.qq.com/', icon: 'icon-self-weixinwenjian', text: '文件传输助手' }
         ]
     },
@@ -25,13 +26,13 @@ export const NAVIGATION_GROUPS = [
         icon: 'icon-self-gongzuo',
         items: [
             { href: 'https://www.xiaohongshu.com/', icon: 'icon-self-xiaohongshu', text: '小红书' },
-            { href: 'https://xhs.nas.yq59.top:31000/', icon: 'icon-self-xhs', text: 'XHS运营' },
-            { href: 'https://xhs-goods-copy.nas.yq59.top:31000', icon: 'icon-self-RectangleCopy33', text: 'goods-copy' },
-            { href: 'https://xhs-product-selection.nas.yq59.top:31000', icon: 'icon-self-xuanpinzhongxin', text: 'XHS选品' },
+            { href: 'https://workstation.nas.yq59.top:31000', icon: 'icon-self-XXGL_HZXXB', text: '笔记台' },
+            { href: 'https://xhs.nas.yq59.top:31000', icon: 'icon-self-xhs', text: 'XHS运营' },
+            // { href: 'https://xhs-goods-copy.nas.yq59.top:31000', icon: 'icon-self-RectangleCopy33', text: 'goods-copy' },
+            // { href: 'https://xhs-product-selection.nas.yq59.top:31000', icon: 'icon-self-xuanpinzhongxin', text: 'XHS选品' },
             // { href: 'https://code.nas.yq59.top:31000/', icon: 'icon-self-vscode', text: 'Code' },
-            { href: 'https://chamber.nas.yq59.top:31000/', icon: 'icon-self-openchamber-logo-light', text: 'Chamber' },
-            { href: 'https://wchamber.nas.yq59.top:31000/', icon: 'icon-self-openchamber-logo-light', text: 'WChamber' },
-            { href: 'https://claw.nas.yq59.top:31000/', icon: 'icon-self-claw', text: '龙虾' }
+            { href: 'https://chamber.nas.yq59.top:31000', icon: 'icon-self-openchamber-logo-light', text: 'Chamber' },
+            { href: 'https://claw.nas.yq59.top:31000', icon: 'icon-self-claw', text: '龙虾' }
         ]
     },
     {
@@ -43,7 +44,7 @@ export const NAVIGATION_GROUPS = [
             { href: 'https://app.enjoy.bot/home', icon: 'icon-self-svg', text: 'Enjoy' },
             // { href: 'https://mubu.com/app', icon: 'icon-self-logo1', text: '幕布' },
             // { href: 'https://ankiweb.net/', icon: 'icon-self-anki', text: 'Anki' },
-            { href: 'https://book.nas.yq59.top:31000/', icon: 'icon-self-tushuguan-fuwuye', text: '馆藏图书' },
+            { href: 'https://book.nas.yq59.top:31000', icon: 'icon-self-tushuguan-fuwuye', text: '馆藏图书' },
             { href: 'https://weread.qq.com/', icon: 'icon-self-weixindushu', text: '微信读书' },
             { href: 'https://book.douban.com/', icon: 'icon-self-douban', text: '豆瓣读书' }
         ]
@@ -111,7 +112,7 @@ export const NAVIGATION_GROUPS = [
         items: [
             { href: 'https://lucky.nas.yq59.top:31000', icon: 'icon-self-Lucky', text: 'Lucky' },
             { href: 'http://192.168.31.13:31004/', icon: 'icon-self-clash', text: 'Clash' },
-            { href: 'https://bookmarks.nas.yq59.top:31000', icon: 'icon-self-bookmarks', text: '私人书签' },
+            { href: 'https://cups.nas.yq59.top:31000', icon: 'icon-self-dayinji', text: 'CUPS' },
             { href: 'https://dst.nas.yq59.top:31000', icon: 'icon-self-dst', text: '饥荒' }
         ]
     }
