@@ -30,6 +30,7 @@ export const LAN_ORIGIN_MAP = {
     'https://xhs-goods-copy.nas.yq59.top:31000': '31008',
     'https://web-node.nas.yq59.top:31000': '31009',
     'https://e450.nas.yq59.top:31000': '31010',
+    'https://private-drop.nas.yq59.top:31000': '31012',
     'https://lucky.nas.yq59.top:31000': '',
     'https://dst.nas.yq59.top:31000': '',
 };
