@@ -78,8 +78,10 @@ img.icon {
 }
 
 .top-links-right {
+    position: fixed;
+    top: calc(12px + env(safe-area-inset-top, 0px));
     left: auto;
-    right: 16px;
+    right: calc(16px + env(safe-area-inset-right, 0px));
 }
 
 .top-links a {
