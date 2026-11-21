@@ -9,9 +9,9 @@ export const NAVIGATION_GROUPS = [
         title: '热门常用',
         icon: 'icon-remen',
         items: [
+            { href: 'https://private-drop.nas.yq59.top:31000', icon: 'icon-gongxiang', text: '消息站' },
             { href: 'https://fnos.net/qqrr0910', icon: 'icon-self-fnos', text: '飞牛' },
             { href: 'https://e450.nas.yq59.top:31000', icon: 'icon-self-a-daimakaifadiannao', text: 'E450' },
-            { href: 'https://private-drop.nas.yq59.top:31000', icon: 'icon-gongxiang', text: '消息站' },
             { href: 'https://web-node.nas.yq59.top:31000', icon: 'icon-self-bijiben', text: 'Note' },
             { href: 'https://bookmarks.nas.yq59.top:31000', icon: 'icon-self-bookmarks', text: '私人书签' },
             { href: 'https://www.icloud.com.cn/', icon: 'icon-self-iCloudyunpan', text: 'iCloud' },
